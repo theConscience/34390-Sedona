@@ -1,0 +1,71 @@
+.main-nav {
+  position: relative;
+  z-index: 2;
+  // close menu button
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 17px;
+    width: 23px;
+    height: 22px;
+    bottom: -39px;
+    right: 20px;
+    background-image: url(../img/cancel.png);
+    cursor: pointer;
+  }
+  // open menu button
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 23px;
+    height: 22px;
+    bottom: -39px;
+    right: 20px;
+    background-color: #eee;
+    background-image: linear-gradient(
+      $alternate_bg_color 0,
+      $alternate_bg_color 18.181818%,
+      #fff 18.181818%,
+       #fff  40.90909%,
+       $alternate_bg_color 40.90909%,
+       $alternate_bg_color 59.090909%,
+      #fff 59.090909%,
+      #fff 81.818181%,
+      $alternate_bg_color 81.818181%,
+      $alternate_bg_color 100%);
+    cursor: pointer;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: $alternate_bg_color;
+    li {
+      text-align: center;
+      a {
+        display: block;
+        padding: {
+          top: $base_padding;
+          bottom: $base_padding;
+        }
+        border: {
+          width: 1px 0 1px 0;
+          style: solid;
+          top-color: $border_light_color;
+          bottom-color: $border_dark_color;
+        }
+        text-decoration: none;
+        text-transform: uppercase;
+        fon-size: $bigger_font_size;
+        line-height: $bigger_font_size;
+        color: $alternate_font_color;
+        &:hover {
+          background-color: $alternate_bg_color - 22;
+        }
+      }
+    }
+  }
+}

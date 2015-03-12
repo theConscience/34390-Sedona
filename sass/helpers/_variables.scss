@@ -1,0 +1,34 @@
+//typography variables
+
+$base_font_size: 14px;
+$bigger_font_size: floor($base_font_size*1.28572); //18px
+$biggest_font_size: floor($base_font_size*1.5); //21px
+
+$font_size_14: 14px;
+$font_size_18: 18px;
+$font_size_21: 21px;
+
+$base_font_family: 'PT Sans', 'Tahoma', sans-serif;
+
+$base_line_height: $base_font_size*1.5;
+$bigger_line_height: $base_font_size*2;
+
+$main_font_color: #000;
+$alternate_font_color: #fff;
+
+$base_padding: floor($base_font_size*1.28572);
+
+//color variables
+$base_bg_color: #fff;
+$alternate_bg_color: #81b3d2;
+$darken_bg_color: #eeeeee;
+$info_bg_color: #766357;
+$alter_row_color: #f2f2f2;
+
+$base_color: #000;
+
+$border_dark_color: #678fa8;
+$border_light_color: #9ac2db;
+
+//layout variables
+$xs_width: 320px;

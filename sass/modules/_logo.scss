@@ -1,0 +1,30 @@
+.logo-wrap {
+  position: absolute;
+  width: $xs_width;
+  bottom: 0;
+  height: 56px;
+  z-index: 1;
+  background-color: $base_bg_color;
+  text-align: center;
+  cursor: default;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -53px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 106.06px;
+    height: 106.06px;
+    border-radius: 0 0 20px 0;
+    background-color: $alternate_bg_color;
+    transform: rotate(45deg) skewX(5deg) skewY(5deg);
+    z-index: -1;
+  }
+  .logo {
+    border: 0;
+    width: 67px;
+    height: 56px;
+    cursor: pointer;
+  }
+}

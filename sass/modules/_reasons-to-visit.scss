@@ -1,0 +1,49 @@
+.reasons-to-visit {
+  padding-top: $base_font_size*3;
+  text-transform: uppercase;
+  background-color: $base_bg_color;
+  .article-header {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: $base_font_size*4;
+    text-align: center;
+    text-transform: uppercase;
+    background-image:
+      linear-gradient(
+        9deg,
+        $alternate_bg_color 10%,
+        transparent 10%),
+      linear-gradient(
+        -9deg,
+        $alternate_bg_color 10%,
+        transparent 10%);
+    h2 {
+      margin-top: 0;
+      margin-bottom:  $base_font_size*3;
+      font-size: $bigger_font_size;
+      font-weight: 700;
+      line-height: $bigger_line_height;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+.reason {
+  padding-top: $base_font_size*3;
+  padding-right: 30px;
+  padding-bottom: $base_font_size*3;
+  padding-left: 30px;
+  text-align: center;
+  &.active {
+    background-color: $alternate_bg_color;
+    color: $alternate_font_color;
+  }
+  h2 {
+    font-size: $bigger_font_size;
+    font-weight: 700;
+    line-height: $bigger_line_height;
+  }
+}
