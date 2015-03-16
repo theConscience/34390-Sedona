@@ -1,0 +1,49 @@
+.options-list {
+  padding-top: $base_font-size*3;
+  padding-bottom: $base_font-size*3;
+  .option:first-of-type {
+    h2 {
+      margin-top: 0;
+    }
+  }
+  .option:last-of-type {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.option {
+  position: relative;
+  padding-left: $base-font-size*5;
+  padding-right: 20px;
+  h2 {
+    margin: 0;
+    margin-bottom: $base_line_height; //21px
+  }
+  p {
+    margin: 0;
+    margin-bottom: $base_line_height+$base_font_size;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+  }
+  &.accomodation:before {
+    background-image: url(../img/i-house.png);
+    width: 36px;
+    height: 36px;
+  }
+  &.souvenirs:before {
+    background-image: url(../img/i-present.png);
+    width: 32px;
+    height: 38px;
+  }
+  &.food:before {
+    background-image: url(../img/i-burger.png);
+    width: 37px;
+    height: 35px;
+  }
+}
