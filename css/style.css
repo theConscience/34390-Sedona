@@ -484,14 +484,19 @@ main {
     background-image: url(../img/blockquote.png);
     font-size: 0; }
 
+.picture_wrapper img {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
 .reasons-to-visit {
-  padding-top: 42px;
   text-transform: uppercase;
   background-color: #fff; }
   .reasons-to-visit .article-header {
     position: relative;
-    padding-left: 30px;
+    padding-top: 42px;
     padding-right: 30px;
+    padding-left: 30px;
     padding-bottom: 56px;
     text-align: center;
     text-transform: uppercase;
@@ -499,26 +504,80 @@ main {
     background-image: linear-gradient(9deg, #81b3d2 10%, transparent 10%), linear-gradient(-9deg, #81b3d2 10%, transparent 10%); }
     .reasons-to-visit .article-header h2 {
       margin-top: 0;
+      margin-bottom: 0;
       margin-bottom: 42px;
       font-size: 18px;
       font-weight: 700;
       line-height: 28px; }
     .reasons-to-visit .article-header p {
       margin-top: 0;
-      margin-bottom: 0; }
+      margin-bottom: 42px; }
+      .reasons-to-visit .article-header p:last-of-type {
+        margin-bottom: 0; }
+
+.l-col-wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #eeeeee; }
 
 .reason {
-  padding-top: 42px;
+  padding-top: 21px;
   padding-right: 30px;
-  padding-bottom: 42px;
+  padding-bottom: 21px;
   padding-left: 30px;
-  text-align: center; }
+  border-bottom: 1px solid #d6d6d6;
+  text-align: center;
+  background-color: #eeeeee; }
   .reason.active {
+    padding-top: 42px;
+    padding-bottom: 42px;
     background-color: #81b3d2;
+    border-bottom-width: 0px;
     color: #fff; }
   .reason h2 {
+    margin-top: 0;
+    margin-bottom: 14px;
     font-size: 18px;
     font-weight: 700;
     line-height: 28px; }
+  .reason p {
+    margin-top: 21px;
+    margin-bottom: 0; }
+
+.options-list {
+  padding-top: 42px;
+  padding-bottom: 42px; }
+  .options-list .option:first-of-type h2 {
+    margin-top: 0; }
+  .options-list .option:last-of-type p:last-of-type {
+    margin-bottom: 0; }
+
+.option {
+  position: relative;
+  padding-left: 70px;
+  padding-right: 20px; }
+  .option h2 {
+    margin: 0;
+    margin-bottom: 21px; }
+  .option p {
+    margin: 0;
+    margin-bottom: 35px; }
+  .option:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 20px; }
+  .option.accomodation:before {
+    background-image: url(../img/i-house.png);
+    width: 36px;
+    height: 36px; }
+  .option.souvenirs:before {
+    background-image: url(../img/i-present.png);
+    width: 32px;
+    height: 38px; }
+  .option.food:before {
+    background-image: url(../img/i-burger.png);
+    width: 37px;
+    height: 35px; }
 
 /*# sourceMappingURL=style.css.map */
