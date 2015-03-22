@@ -11,7 +11,7 @@ html {
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
   /* 2 */ }
 
 /**
@@ -49,7 +49,7 @@ progress,
 video {
   display: inline-block;
   /* 1 */
-  vertical-align: baseline;
+  vertical-align: baseline
   /* 2 */ }
 
 /**
@@ -167,7 +167,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -208,7 +207,7 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */
-  margin: 0;
+  margin: 0
   /* 3 */ }
 
 /**
@@ -240,7 +239,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-  cursor: pointer;
+  cursor: pointer
   /* 3 */ }
 
 /**
@@ -276,7 +275,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-  padding: 0;
+  padding: 0
   /* 2 */ }
 
 /**
@@ -296,8 +295,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -325,7 +322,7 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
-  padding: 0;
+  padding: 0
   /* 2 */ }
 
 /**
@@ -397,7 +394,7 @@ html {
   line-height: 1em;
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: .2em;
+  margin-left: .2em
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
@@ -920,7 +917,9 @@ html {
     height: 106.06px;
     border-radius: 0 0 20px 0;
     background-color: #81b3d2;
-    transform: rotate(45deg) skewX(5deg) skewY(5deg);
+    -webkit-transform: rotate(45deg) skewX(5deg) skewY(5deg);
+        -ms-transform: rotate(45deg) skewX(5deg) skewY(5deg);
+            transform: rotate(45deg) skewX(5deg) skewY(5deg);
     z-index: -1; }
   .logo-wrap .logo {
     border: 0;
@@ -952,6 +951,7 @@ html {
     bottom: -39px;
     right: 20px;
     background-color: #eee;
+    background-image: -webkit-linear-gradient(#81b3d2 0, #81b3d2 18.18182%, #fff 18.18182%, #fff 40.90909%, #81b3d2 40.90909%, #81b3d2 59.09091%, #fff 59.09091%, #fff 81.81818%, #81b3d2 81.81818%, #81b3d2 100%);
     background-image: linear-gradient(#81b3d2 0, #81b3d2 18.18182%, #fff 18.18182%, #fff 40.90909%, #81b3d2 40.90909%, #81b3d2 59.09091%, #fff 59.09091%, #fff 81.81818%, #81b3d2 81.81818%, #81b3d2 100%);
     cursor: pointer; }
   .main-nav ul {
@@ -974,7 +974,8 @@ html {
         fon-size: 18px;
         line-height: 18px;
         color: #fff;
-        transition: background-color 0.5s ease; }
+        -webkit-transition: background-color 0.5s ease;
+                transition: background-color 0.5s ease; }
         .main-nav ul li a:hover {
           background-color: #598baa; }
 
@@ -984,6 +985,7 @@ main {
 .banner {
   height: 390px;
   padding-top: 46.998px;
+  background-image: -webkit-linear-gradient(77deg, #ffffff 8%, transparent 8%), -webkit-linear-gradient(103deg, #ffffff 8%, transparent 8%), url(../img/bg-photo-default.jpg);
   background-image: linear-gradient(13deg, #ffffff 8%, transparent 8%), linear-gradient(-13deg, #ffffff 8%, transparent 8%), url(../img/bg-photo-default.jpg); }
   .banner .welcome {
     width: 196px;
@@ -1023,6 +1025,7 @@ main {
     padding-bottom: 56px;
     text-align: center;
     text-transform: uppercase;
+    background-image: -webkit-linear-gradient(81deg, #81b3d2 10%, transparent 10%), -webkit-linear-gradient(99deg, #81b3d2 10%, transparent 10%);
     background-image: linear-gradient(9deg, #81b3d2 10%, transparent 10%), linear-gradient(-9deg, #81b3d2 10%, transparent 10%); }
     .reasons-to-visit .article-header h2 {
       margin-top: 0;
@@ -1178,7 +1181,8 @@ main {
       text-align: center;
       color: #fff;
       background-color: #81b3d2;
-      transition: background-color 0.5s ease; }
+      -webkit-transition: background-color 0.5s ease;
+              transition: background-color 0.5s ease; }
       .hotels-search .article-content .hotel-search-form input[type='submit']:hover {
         background-color: #3e84af; }
 
@@ -1218,7 +1222,8 @@ main {
           .page-footer .l-center-wrapper .footer-content .social-list li a {
             display: block;
             background-color: #81b3d2;
-            transition: background-color 0.5s ease; }
+            -webkit-transition: background-color 0.5s ease;
+                    transition: background-color 0.5s ease; }
             .page-footer .l-center-wrapper .footer-content .social-list li a:hover {
               background-color: #3e84af; }
             .page-footer .l-center-wrapper .footer-content .social-list li a[class|='i']:before {
