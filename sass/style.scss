@@ -2,21 +2,31 @@
 
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
 @import "helpers/variables";
+@import "helpers/mixins";
 
 @import "base/typo";
 @import "base/colors";
+@import "base/fonts";
 @import "base/block-model";
+@import "base/icons";
+@import "base/sprites";
+
 
 @import "layout/layout";
+@import "layout/media-queries";
+
 
 @import "modules/header";
 @import "modules/logo";
 @import "modules/main-nav";
 @import "modules/main";
 @import "modules/banner";
-@import "modules/picture_wrapper";
+@import "modules/picture-wrapper";
 @import "modules/reasons-to-visit";
 @import "modules/options-list";
+@import "modules/hotels-search";
+@import "modules/map";
+@import "modules/footer";
 
 //@import "state";
 //@import "theme";

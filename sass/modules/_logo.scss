@@ -5,8 +5,12 @@
   height: 56px;
   z-index: 1;
   background-color: $base_bg_color;
-  text-align: center;
-  cursor: default;
+  a {
+    display: block;
+    margin: auto;
+    text-align: center;
+    cursor: default;
+  }
   &:before {
     content: '';
     position: absolute;

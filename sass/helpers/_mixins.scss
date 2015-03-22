@@ -1,0 +1,43 @@
+/* layout column classes */
+
+@mixin generate_columns($cols_count) {
+  @for $i from 1 to $cols_count+1 {
+    @for $j from 1 to $i {
+      @if ( $i%$j != 0 or $i == 1 or $j == 1 ) and ($i%2+$j%2 != 0)  {
+         [class|='l-col-#{$j}-#{$i}'] {
+          width: 100%/$i*$j;
+        }
+      }
+    }
+  }
+}
+
+
+/* block width classes */
+
+@mixin generate_widths($cols_count) {
+  @for $i from 1 to $cols_count+1 {
+    @for $j from 1 to $i {
+      @if ( $i%$j != 0 or $i == 1 or $j == 1 ) and ($i%2+$j%2 != 0)  {
+        [class|='width-#{$j}-#{$i}'] {
+          width: 100%/$i*$j;
+          display: inline-block;
+          margin-right: -2px;
+        }
+      }
+    }
+  }
+}
+
+
+/* generate media queries */
+
+@mixin generate_media($viewports){
+  @each $key,$val in $viewports {
+    @media screen and (max-width: $val) {
+      [class$='#{$key}'] {
+        width: 100%;
+      }
+    }
+  }
+}

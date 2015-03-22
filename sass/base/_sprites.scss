@@ -1,0 +1,59 @@
+.i-glukhanko, .i-htmlacademy, .i-burger, .i-house, .i-present, .i-calendar, .i-minus, .i-plus{
+  display: inline-block;
+  background: url(../img/sprites.png) no-repeat;
+}
+
+.i-glukhanko{
+  background-position: -4px -0.975006103515625px ;
+  width: 27px;
+  height: 30px;
+  margin-bottom: -0.7em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.i-htmlacademy{
+  background-position: -54px 0;
+  width: 27px;
+  height: 33px;
+  margin-bottom: -0.8em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.i-burger{
+  background-position: 0 -47.98749542236328px ;
+  width: 37px;
+  height: 35px;
+}
+
+.i-house{
+  background-position: -49px -47.98749542236328px ;
+  width: 37px;
+  height: 37px;
+}
+
+.i-present{
+  background-position: -98px -45.975006103515625px ;
+  width: 32px;
+  height: 38px;
+}
+
+.i-calendar{
+  background-position: -8px -101.9749984741211px ;
+  width: 20px;
+  height: 22px;
+}
+
+.i-minus{
+  background-position: -112px -114.99999237060547px ;
+  width: 11px;
+  height: 3px;
+}
+
+.i-plus{
+  background-position: -63px -109.98749542236328px ;
+  width: 11px;
+  height: 11px;
+}
+

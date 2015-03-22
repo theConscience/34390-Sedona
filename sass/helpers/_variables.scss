@@ -19,9 +19,11 @@ $alternate_font_color: #fff;
 $base_padding: floor($base_font_size*1.28572);
 
 //color variables
+
 $base_bg_color: #fff;
 $alternate_bg_color: #81b3d2;
 $darken_bg_color: #eeeeee;
+$darken_alt_bg_color: darken($alternate_bg_color, 20%);
 $info_bg_color: #766357;
 $alter_row_color: #f2f2f2;
 
@@ -31,4 +33,12 @@ $border_dark_color: #678fa8;
 $border_light_color: #9ac2db;
 
 //layout variables
+
 $xs_width: 320px;
+$sm_width: 1500px;//480px;
+$md_width: 1500px;//768px;
+$lg_width: 1500px;//960px;
+$xl_width: 1500px;//1200px;
+
+$columns: 12;
+
