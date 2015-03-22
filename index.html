@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body>
+  <body  onload="initialize()">
 
     <header class="page-header">
       <div class="l-center-wrapper">
 
-        <a href="##" class="logo-wrap">
-          <img src="img/logo.png" class="logo" width="67px" height="56px" alt="site logo">
-        </a>
+        <div href="##" class="logo-wrap">
+          <a href="#">
+            <img src="img/logo.png" class="logo" width="67px" height="56px" alt="site logo">
+            </a>
+        </div>
 
         <nav class="main-nav">
           <ul>
@@ -85,26 +87,23 @@
             <img src="img/bg-photo3-default.jpg" alt="picture of sedona" width="320px" height="256px">
           </div>
 
+          <section class="reason">
+              <h2>Небольшая площадь</h2>
+              <span class="stripe">— №3 —</span>
+              <p>Все достопримечательности находятся очень близко</p>
+          </section>
 
-          <div class="l-col-wrap">
-            <section class="reason">
-                <h2>Небольшая площадь</h2>
-                <span class="stripe">— №3 —</span>
-                <p>Все достопримечательности находятся очень близко</p>
-            </section>
+          <section class="reason">
+              <h2>Красивая дорога</h2>
+              <span class="stripe">— №4 —</span>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </section>
 
-            <section class="reason">
-                <h2>Красивая дорога</h2>
-                <span class="stripe">— №4 —</span>
-                <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-            </section>
-
-            <section class="reason">
-                <h2>Мало туристов</h2>
-                <span class="stripe">— №5 —</span>
-                <p>Большинство едет в Гранд-Каньон и толпится там</p>
-            </section>
-          </div>
+          <section class="reason">
+              <h2>Мало туристов</h2>
+              <span class="stripe">— №5 —</span>
+              <p>Большинство едет в Гранд-Каньон и толпится там</p>
+          </section>
 
         </article>
 
@@ -119,22 +118,21 @@
 
           <section class="article-content">
             <form class="hotel-search-form" name="hotel_search_form" action="" method="post">
-              <label for="arrival-date">Дата заезда:</label>
-              <input type="date" id="arrival-date" name="arrival_date" value="24 апреля 2015">
-              <label for="departure-date">Дата выезда:</label>
-              <input type="date" id="departure-date" name="departure_date" value="4 июля 2015">
-              <div class="l-row">
-                <div class="l-col-1-2">
-                  <div class="num-selector">
-                    <label for="adults-count">Взрослые:</label>
-                    <input type="number" id="adults-count" name="adults_count" value="2" min="0">
-                  </div>
+
+              <label for="arrival-date" class="width-1-4-md">Дата заезда:</label>
+              <input type="date" id="arrival_date" class="width-3-4-md" name="arrival_date" value="2015-04-24">
+              <label for="departure-date" class="width-1-4-md">Дата выезда:</label>
+              <input type="date" id="departure_date" class="width-3-4-md" name="departure_date" value="2015-07-04">
+              <div class="l-col-1-2-xs  clear-padding">
+                <div class="num-switcher">
+                  <label for="adults-count">Взрослые:</label>
+                  <input type="number" id="adults-count" name="adults_count" value="2" min="0">
                 </div>
-                <div class="l-col-1-2">
-                  <div class="num-selector">
-                    <label for="children-count">Дети:</label>
-                    <input type="number" id="children-count" name="children_count" value="0" min="0">
-                  </div>
+              </div>
+              <div class="l-col-1-2-xs  clear-padding">
+                <div class="num-switcher  fl-right">
+                  <label for="children-count">Дети:</label>
+                  <input type="number" id="children-count" class="fl-right" name="children_count" value="0" min="0">
                 </div>
               </div>
               <input type="submit" value="Найти">
@@ -142,7 +140,7 @@
           </section>
         </article>
 
-        <figure class="map"></figure>
+        <figure id="map_canvas" class="map"></figure>
 
        </div>
     </main>
@@ -152,19 +150,22 @@
     <footer class="page-footer">
       <div class="l-center-wrapper">
 
-        <p class="hashtag">#VISITSEDONA</p>
-        <ul class="social">
-          <li class="twitter"><a href="#"></a></li>
-          <li class="facebook"><a href="#"></a></li>
-          <li class="youtube"><a href="#"></a></li>
-        </ul>
-        <p class="copyright">
-          Website by <span class="icon-font">&#43;</span> for <span class="icon-font">&#43;</span>
-        </p>
-
+        <div class="footer-content">
+          <p class="hashtag">#VISITSEDONA</p>
+          <ul class="social-list">
+            <li><a href="#" class="i-twitter"></a></li>
+            <li><a href="#" class="i-facebook"></a></li>
+            <li><a href="#" class="i-youtube"></a></li>
+          </ul>
+          <p class="copyright">
+            Website by <i class="i-glukhanko"></i> for <i class="i-htmlacademy"></i>
+          </p>
+        </div>
       </div>
     </footer>
 
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="js/script.js"></script>
     <!-- <script src="js/script.js"></script> -->
   </body>
 </html>
