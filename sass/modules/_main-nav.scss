@@ -2,28 +2,26 @@
   position: relative;
   z-index: 2;
   // close menu button
-  &:before {
+  &:before,
+  &:after {
     content: '';
     position: absolute;
     right: 0;
-    top: 17px;
     width: 23px;
     height: 22px;
     bottom: -39px;
     right: 20px;
+    @include apply-to(greater-than, $md_width) {
+      display: none;
+    }
+  }
+  &:before {
+    top: 17px;
     background-image: url(../img/cancel.png);
     cursor: pointer;
   }
   // open menu button
   &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 23px;
-    height: 22px;
-    bottom: -39px;
-    right: 20px;
     background-color: #eee;
     background-image: linear-gradient(
       $alternate_bg_color 0,
@@ -43,8 +41,16 @@
     padding: 0;
     list-style-type: none;
     background-color: $alternate_bg_color;
+    @include apply-to(greater-than, $md_width) {
+      background-color: inherit;
+    }
+
     li {
       text-align: center;
+      @include apply-to(greater-than, $md_width) {
+        display: inline-block;
+        margin-right: -2px;
+      }
       a {
         display: block;
         padding: {
@@ -62,9 +68,34 @@
         fon-size: $bigger_font_size;
         line-height: $bigger_font_size;
         color: $alternate_font_color;
-        transition: background-color 0.5s ease;
+        transition:
+                        background-color 0.5s ease,
+                        color 0.5s ease;
         &:hover {
           background-color: $alternate_bg_color - 40;
+          @include apply-to(greater-than, $md_width) {
+            background-color: $alternate_bg_color;
+            color: $alternate_color;
+          }
+        }
+        @include apply-to(greater-than, $md_width) {
+          border: none;
+          padding: 18px 30px;
+          font-size: $base_font_size;
+          font-weight: 700;
+          color: $base_color;
+        }
+      }
+      &:nth-child(1),
+      &:nth-child(4) {
+        @include apply-to(greater-than, $md_width) {
+          float: right;
+        }
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        @include apply-to(greater-than, $md_width) {
+          float: left;
         }
       }
     }

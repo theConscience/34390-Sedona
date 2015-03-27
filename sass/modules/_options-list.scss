@@ -1,14 +1,12 @@
 .options-list {
   padding-top: $base_font-size*3;
   padding-bottom: $base_font-size*3;
+  @include apply-to(greater-than, $md_width) {
+    height: 330px;
+  }
   .option:first-of-type {
     h2 {
       margin-top: 0;
-    }
-  }
-  .option:last-of-type {
-    p:last-of-type {
-      margin-bottom: 0;
     }
   }
 }
@@ -17,6 +15,12 @@
   position: relative;
   padding-left: $base-font-size*5;
   padding-right: 20px;
+  @include apply-to(greater-than, $md_width) {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 7*$base_line_height;
+    text-align: center;
+  }
   h2 {
     margin: 0;
     margin-bottom: $base_line_height; //21px
