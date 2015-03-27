@@ -5,8 +5,12 @@
   height: 56px;
   z-index: 1;
   background-color: $base_bg_color;
+  @include apply-to(greater-than, $md_width) {
+     width: $md_width;
+  }
   a {
     display: block;
+    width: 67px;
     margin: auto;
     text-align: center;
     cursor: default;

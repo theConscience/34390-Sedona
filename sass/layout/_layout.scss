@@ -1,33 +1,27 @@
 //.main-nav>li 320x56
-.ta-left {
-  text-align: left;
+[class*="ta-left"] {
+  text-align: left !important;
 }
 
-.ta-center {
-  text-align: center;
+[class*="ta-center"] {
+  text-align: center !important;
 }
 
-.ta-right {
-  text-align: right;
+[class*="ta-right"] {
+  text-align: right !important;
 }
 
-
-
-.fl-left {
-  float: left;
+[class*="fl-left"] {
+  float: left !important;
 }
 
-.fl-right {
-  float: right;
+[class*="fl-right"] {
+  float: right !important;
 }
 
 .l-center-wrapper {
   width: $xs_width;
   margin: auto;
-}
-
-.l-row {
-  display: block;
   &:before,
   &:after {
     content: '';
@@ -36,25 +30,60 @@
   &:after {
     clear: both;
   }
+}
+
+.l-row {
+  display: block;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
   &.clear-padding {
     margin-left: -20px;
     margin-right: -20px;
   }
+  &.collapsed-gutter [class*='l-col-'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.collapsed-gutter [class*='l-col-']:first-of-type {
+    padding-left: 20px;
+  }
+  &.collapsed-gutter [class*='l-col-']:last-of-type {
+    padding-right: 20px;
+  }
 }
 
 [class|='l-col'] {
+  position: relative;
   float: left;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
   //for sub-columns
   &.clear-padding {
     padding-left: 0;
     padding-right: 0;
   }
+  &.collapse-right {
+    padding-right: 0;
+  }
+  &.collapse-left {
+    padding-left: 0;
+  }
 }
 
 [class|='width'] {
+  display: inline-block;
+  margin-right: -2px;
 }
 
 @include generate_columns($columns);

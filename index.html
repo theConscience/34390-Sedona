@@ -12,14 +12,14 @@
     <header class="page-header">
       <div class="l-center-wrapper">
 
-        <div href="##" class="logo-wrap">
+        <div class="logo-wrap">
           <a href="#">
             <img src="img/logo.png" class="logo" width="67px" height="56px" alt="site logo">
             </a>
         </div>
 
         <nav class="main-nav">
-          <ul>
+          <ul class="clearfix">
             <li><a href="#">Карта штата</a></li>
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
@@ -52,39 +52,62 @@
             <p>Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
           </header>
 
-           <section class="reason active">
-            <h2>Настоящий городок</h2>
-            <span class="stripe">— №1 —</span>
-            <p>Седона не аттракцион для туристов - там течет своя жизнь</p>
-          </section>
+           <div class="l-row">
+              <section class="media-block">
+                  <div class="l-col-1-3-md  clear-padding">
+                   <section class="reason active">
+                    <h2>Настоящий городок</h2>
+                    <span class="stripe">— №1 —</span>
+                    <p>Седона не аттракцион для туристов - там течет своя жизнь</p>
+                   </section>
+                 </div>
+                  <div class="l-col-2-3-md  clear-padding">
+                    <div class="picture-wrapper">
+                      <img src="img/bg-photo2-default.jpg" alt="picture of sedona" width="320px" height="256px">
+                    </div>
+                  </div>
+               </section>
+           </div>
 
-          <div class="picture-wrapper">
-            <img src="img/bg-photo2-default.jpg" alt="picture of sedona" width="320px" height="256px">
+
+          <div class="l-row">
+            <section class="options-list">
+              <div class="l-col-1-3-md  clear-padding">
+                <div class="option accomodation">
+                  <h2>Жилье</h2>
+                  <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </div>
+              </div>
+              <div class="l-col-1-3-md  clear-padding">
+                <div class="option souvenirs">
+                  <h2>Сувениры</h2>
+                  <p>Не только китайского, но и местного производства!</p>
+                </div>
+              </div>
+              <div class="l-col-1-3-md  clear-padding">
+                <div class="option food">
+                  <h2>Еда</h2>
+                  <p>Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                </div>
+              </div>
+            </section>
           </div>
 
-          <section class="options-list">
-            <div class="option accomodation">
-              <h2>Жилье</h2>
-              <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-            </div>
-            <div class="option souvenirs">
-              <h2>Сувениры</h2>
-              <p>Не только китайского, но и местного производства!</p>
-            </div>
-            <div class="option food">
-              <h2>Еда</h2>
-              <p>Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
-            </div>
-          </section>
-
-            <section class="reason active">
-            <h2>Там есть мост Дьявола</h2>
-            <span class="stripe">— №2 —</span>
-            <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
-          </section>
-
-          <div class="picture-wrapper">
-            <img src="img/bg-photo3-default.jpg" alt="picture of sedona" width="320px" height="256px">
+         <div class="l-row">
+            <section class="media-block">
+                <div class="l-col-1-3-md  clear-padding  fl-right">
+                  <section class="reason active">
+                    <h2>Там есть мост Дьявола</h2>
+                    <span class="stripe">— №2 —</span>
+                    <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+                  </section>
+                </div>
+                <div class="l-col-2-3-md  clear-padding">
+                  <div class="picture-wrapper">
+                    <img src="img/bg-photo3-default.jpg" alt="picture of sedona" width="320px" height="256px">
+                  </div>
+              </div>
+            </section>
           </div>
 
           <section class="reason">
@@ -119,22 +142,46 @@
           <section class="article-content">
             <form class="hotel-search-form" name="hotel_search_form" action="" method="post">
 
-              <label for="arrival-date" class="width-1-4-md">Дата заезда:</label>
-              <input type="date" id="arrival_date" class="width-3-4-md" name="arrival_date" value="2015-04-24">
-              <label for="departure-date" class="width-1-4-md">Дата выезда:</label>
-              <input type="date" id="departure_date" class="width-3-4-md" name="departure_date" value="2015-07-04">
-              <div class="l-col-1-2-xs  clear-padding">
-                <div class="num-switcher">
-                  <label for="adults-count">Взрослые:</label>
-                  <input type="number" id="adults-count" name="adults_count" value="2" min="0">
+              <div class="l-row  clear-padding">
+                <div class="l-col-1-4-md  collapse-right">
+                  <label for="arrival-date" >Дата заезда:</label>
+                </div>
+                <div class="l-col-3-4-md">
+                  <input type="date" id="arrival_date" name="arrival_date" value="2015-04-24">
                 </div>
               </div>
-              <div class="l-col-1-2-xs  clear-padding">
-                <div class="num-switcher  fl-right">
-                  <label for="children-count">Дети:</label>
-                  <input type="number" id="children-count" class="fl-right" name="children_count" value="0" min="0">
+              <div class="l-row  clear-padding">
+                <div class="l-col-1-4-md  collapse-right">
+                  <label for="departure-date">Дата выезда:</label>
+                </div>
+                <div class="l-col-3-4-md">
+                  <input type="date" id="departure_date" name="departure_date" value="2015-07-04">
                 </div>
               </div>
+
+              <div class="l-row  clear-padding">
+                <div class="l-col-1-2-xs  clear-padding">
+                  <div class="num-switcher  clearfix">
+                    <div class="l-col-1-2-md">
+                      <label for="adults-count">Взрослые:</label>
+                    </div>
+                    <div class="l-col-1-2-md">
+                      <input type="number" id="adults-count" name="adults_count" value="2" min="0">
+                    </div>
+                  </div>
+                </div>
+                <div class="l-col-1-2-xs  clear-padding">
+                  <div class="num-switcher  clearfix  ta-right-md">
+                     <div class="l-col-1-2-md">
+                       <label for="children-count">Дети:</label>
+                     </div>
+                     <div class="l-col-1-2-md">
+                       <input type="number" id="children-count"  name="children_count" value="0" min="0" class="fl-right">
+                     </div>
+                  </div>
+                </div>
+              </div>
+
               <input type="submit" value="Найти">
             </form>
           </section>
@@ -151,15 +198,23 @@
       <div class="l-center-wrapper">
 
         <div class="footer-content">
-          <p class="hashtag">#VISITSEDONA</p>
-          <ul class="social-list">
-            <li><a href="#" class="i-twitter"></a></li>
-            <li><a href="#" class="i-facebook"></a></li>
-            <li><a href="#" class="i-youtube"></a></li>
-          </ul>
-          <p class="copyright">
-            Website by <i class="i-glukhanko"></i> for <i class="i-htmlacademy"></i>
-          </p>
+          <div class="l-row clear-padding">
+            <div class="l-col-1-3-md">
+              <p class="hashtag">#VISITSEDONA</p>
+            </div>
+            <div class="l-col-1-3-md">
+              <ul class="social-list">
+                <li><a href="#" class="i-twitter"></a></li>
+                <li><a href="#" class="i-facebook"></a></li>
+                <li><a href="#" class="i-youtube"></a></li>
+              </ul>
+            </div>
+            <div class="l-col-1-3-md">
+              <p class="copyright">
+                Website by <i class="i-glukhanko"></i> for <i class="i-htmlacademy"></i>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
