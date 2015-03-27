@@ -4,7 +4,10 @@
   text-transform: uppercase;
   background-color: #fff;
   box-shadow: 0 3px 9px -2px #333;
-
+  @include apply-to(greater-than, $md_width) {
+    width: 569px;
+    margin: auto;
+  }
   .article-header {
     text-align: center;
     padding-top: $base_font_size*2;
@@ -37,64 +40,82 @@
     padding-right: 20px;
     padding-bottom: 48px;
     padding-left: 20px;
-    .hotel-search-form {
-      label,
-      input {
-        box-sizing: border-box;
-        padding: 8px 14px 9px 14px;
-        font-weight: 700;
-      }
-      label {
-        padding-bottom: $base_font_size;
-      }
-      input {
-        margin-bottom: $base_line-height;
-        border: none;
-        font-size: $base_font_size;
-        font-family: $base_font_family;
-        text-transform: uppercase;
-        background-color: #f2f2f2;
-        &[type="date"] {
-          padding-right: 50px;
-          background: #f2f2f2 url('../img/i-calendar.png') 90% 40% no-repeat;
-        }
-      }
-      .num-switcher {
-        width: 114px;
-        label,
-        input {
-          width: 100%;
-        }
-        input[type='number'] {
-          margin-bottom: 3*$base_font_size;
-          padding-left: 50px;
-          padding-right: 40px;
-          text-align: center;
-          background-repeat:
-            no-repeat,
-            no-repeat;
-          background-position:
-            15% 49%,
-            85% 47%;
-          background-image:
-            url('../img/i-minus.png'),
-            url('../img/i-plus.png');
-        }
-      }
+    @include apply-to(greater-than, $md_width) {
+      padding-top: 55px;
+      padding-right: 54px;
+      padding-bottom: 56px;
+      padding-left: 54px;
+      position: absolute;
+      background-color: $base_bg_color;
+    }
+  }
+}
+.hotel-search-form {
+  label,
+  input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 8px 14px 9px 14px;
+    font-weight: 700;
+  }
+  label {
+    padding-bottom: $base_font_size;
+    @include apply-to(greater-than, $md_width) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  input {
+    margin-bottom: $base_line_height;
+    border: none;
+    font-size: $base_font_size;
+    font-family: $base_font_family;
+    text-transform: uppercase;
+    background-color: #f2f2f2;
+    @include apply-to(greater-than, $md_width) {
+      margin-bottom: 2*$base_font_size;
+    }
+    &[type="date"] {
+      display: block;
+      width: 100%;
+      padding-right: 50px;
+      background: #f2f2f2 url('../img/i-calendar.png') 90% 40% no-repeat;
+    }
+  }
+  .num-switcher {
+    label {
 
-      input[type='submit'] {
-        width: 100%;
-        font-size: $biggest_font_size;
-        padding: 14px 0;
-        text-align: center;
-        color: #fff;
-        background-color: $alternate_bg_color;
-        transition: background-color 0.5s ease;
-        &:hover {
-          background-color: $darken_alt_bg_color;
-        }
-      }
+    }
+    input[type='number'] {
+      display: block;
+      width: 114px;
+      margin-bottom: 3*$base_font_size;
+      padding-left: 50px;
+      padding-right: 40px;
+      text-align: center;
+      background-repeat:
+        no-repeat,
+        no-repeat;
+      background-position:
+        15% 49%,
+        85% 47%;
+      background-image:
+        url('../img/i-minus.png'),
+        url('../img/i-plus.png');
     }
   }
 
+  input[type='submit'] {
+    width: 100%;
+    font-size: $biggest_font_size;
+    padding: 14px 0;
+    text-align: center;
+    color: #fff;
+    background-color: $alternate_bg_color;
+    transition: background-color 0.5s ease;
+    &:hover {
+      background-color: $darken_alt_bg_color;
+    }
+  }
 }

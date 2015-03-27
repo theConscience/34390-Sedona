@@ -11,6 +11,10 @@
               #ffffff 8%,
               transparent 8%),
     url(../img/bg-photo-default.jpg);
+  @include apply-to(greater-than, $md_width) {
+    height: 514px;
+    padding-top: 76px;
+  }
   .welcome {
     width: 196px;
     height: 66px;

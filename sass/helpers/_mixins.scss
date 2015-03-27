@@ -4,7 +4,7 @@
   @for $i from 1 to $cols_count+1 {
     @for $j from 1 to $i {
       @if ( $i%$j != 0 or $i == 1 or $j == 1 ) and ($i%2+$j%2 != 0)  {
-         [class|='l-col-#{$j}-#{$i}'] {
+         [class*='l-col-#{$j}-#{$i}'] {
           width: 100%/$i*$j;
         }
       }
@@ -21,8 +21,6 @@
       @if ( $i%$j != 0 or $i == 1 or $j == 1 ) and ($i%2+$j%2 != 0)  {
         [class|='width-#{$j}-#{$i}'] {
           width: 100%/$i*$j;
-          display: inline-block;
-          margin-right: -2px;
         }
       }
     }
@@ -32,12 +30,86 @@
 
 /* generate media queries */
 
-@mixin generate_media($viewports){
+@mixin generate_media($viewports) {
   @each $key,$val in $viewports {
     @media screen and (max-width: $val) {
-      [class$='#{$key}'] {
+      [class*='#{$key}'] {
         width: 100%;
       }
     }
   }
+}
+
+@mixin generate_floats($viewports) {
+  @each $key,$val in $viewports {
+    @media screen and (max-width: $val) {
+     .fl-right-#{$key},
+     .fl-left-#{$key} {
+        float: none;
+      }
+    }
+  }
+}
+
+@mixin generate_align($viewports) {
+  @each $key,$val in $viewports {
+    @media screen and (max-width: $val) {
+      .ta-right-#{$key},
+      .ta-center-#{$key} {
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+/*  */
+
+
+
+/* apply options to some media query */
+
+@mixin apply-to($ltgt, $window-size1, $window-size2: none, $orientation: none, $type: none) {
+    $extrema1: null;
+    $extrema2: null;
+    @if $ltgt == less-than {
+        $extrema1: max;
+        @if $window-size2 {
+            $extrema2: min;
+        }
+    }
+    @if $ltgt == greater-than {
+        $extrema1: min;
+        @if $window-size2 {
+            $extrema2: max;
+        }
+    }
+    @if $type != none {
+        $extrema1: #{$extrema1}-#{$type};
+        @if $extrema2 {
+            $extrema2: #{$extrema2}-#{$type};
+        }
+    }
+    @if  $window-size2 == none {
+        @if  $orientation == none {
+            @media only screen and (#{$extrema1}-width: $window-size1) {
+                @content;
+            }
+        } @else {
+            @media only screen and (#{$extrema1}-width: $window-size1) and (orientation: $orientation) {
+                @content;
+            }
+        }
+
+    } @else  {
+        @if  $orientation == none {
+            @media only screen and (#{$extrema1}-width: $window-size1) and (#{$extrema2}-width: $window-size2) {
+                @content;
+            }
+        } @else {
+            @media only screen and (#{$extrema1}-width: $window-size1) and (#{$extrema2}-width: $window-size2) and (orientation: $orientation) {
+                @content;
+            }
+        }
+    }
 }
