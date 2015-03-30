@@ -2,7 +2,8 @@
   padding-top: $base_font-size*3;
   padding-bottom: $base_font-size*3;
   @include apply-to(greater-than, $md_width) {
-    height: 330px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .option:first-of-type {
     h2 {
@@ -19,6 +20,7 @@
     padding-left: 48px;
     padding-right: 48px;
     padding-top: 7*$base_line_height;
+    padding-bottom: 65px;
     text-align: center;
   }
   h2 {
@@ -28,26 +30,57 @@
   p {
     margin: 0;
     margin-bottom: $base_line_height+$base_font_size;
+    @include apply-to(greater-than, $md_width) {
+      margin-bottom: 0;
+    }
   }
   &:before {
     content: '';
     position: absolute;
     top: -10px;
     left: 20px;
+    background-repeat: no-repeat;
+    @include apply-to(greater-than, $md_width) {
+      left: 90px;
+      top: 50px;
+    }
   }
   &.accomodation:before {
     background-image: url(../img/i-house.png);
     width: 36px;
     height: 36px;
+    @include apply-to(greater-than, $md_width) {
+      background-image: url(../img/i-house-md.png);
+      width: 75px;
+      height: 72px;
+    }
   }
-  &.souvenirs:before {
-    background-image: url(../img/i-present.png);
-    width: 32px;
-    height: 38px;
+  &.souvenirs {
+    @include apply-to(greater-than, $md_width) {
+      padding-left: 43px;
+      padding-right: 43px;
+    }
+    &:before {
+      background-image: url(../img/i-present.png);
+      width: 32px;
+      height: 38px;
+      @include apply-to(greater-than, $md_width) {
+        background-image: url(../img/i-present-md.png);
+        width: 64px;
+        height: 76px;
+        top: 44px;
+        left: 95px;
+      }
+    }
   }
   &.food:before {
     background-image: url(../img/i-burger.png);
-    width: 37px;
-    height: 35px;
+    width: 74px;
+    height: 69px;
+    @include apply-to(greater-than, $md_width) {
+      background-image: url(../img/i-burger-md.png);
+      width: 75px;
+      height: 72px;
+    }
   }
 }

@@ -74,8 +74,8 @@
         &:hover {
           background-color: $alternate_bg_color - 40;
           @include apply-to(greater-than, $md_width) {
-            background-color: $alternate_bg_color;
-            color: $alternate_color;
+            background-color: inherit;
+            color: $alternate_bg_color;
           }
         }
         @include apply-to(greater-than, $md_width) {
