@@ -378,6 +378,11 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+@media only screen and (min-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto; } }
+
 [class^="i-"]:before, [class*=" i-"]:before {
   font-family: "fontello";
   font-style: normal;
@@ -483,7 +488,8 @@ html {
 
 .l-center-wrapper {
   width: 320px;
-  margin: auto; }
+  margin: auto;
+  background-color: #fff; }
   .l-center-wrapper:before, .l-center-wrapper:after {
     content: '';
     display: table; }
@@ -959,8 +965,8 @@ html {
           background-color: #598baa; }
           @media only screen and (min-width: 768px) {
             .main-nav ul li a:hover {
-              background-color: #81b3d2;
-              color: #fff; } }
+              background-color: inherit;
+              color: #81b3d2; } }
         @media only screen and (min-width: 768px) {
           .main-nav ul li a {
             border: none;
@@ -986,7 +992,9 @@ main {
   @media only screen and (min-width: 768px) {
     .banner {
       height: 514px;
-      padding-top: 76px; } }
+      padding-top: 76px;
+      background-image: -webkit-linear-gradient(83deg, #ffffff 13%, transparent 13%), -webkit-linear-gradient(97deg, #ffffff 13%, transparent 13%), url(../img/bg-photo-high-md.jpg);
+      background-image: linear-gradient(7deg, #ffffff 13%, transparent 13%), linear-gradient(-7deg, #ffffff 13%, transparent 13%), url(../img/bg-photo-high-md.jpg); } }
   .banner .welcome {
     width: 196px;
     height: 66px;
@@ -1012,7 +1020,12 @@ main {
   display: block;
   border: 0;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  width: 100%;
+  min-width: 320px; }
+  @media only screen and (min-width: 768px) {
+    .picture-wrapper img {
+      max-width: 513px; } }
 
 .reasons-to-visit {
   text-transform: uppercase;
@@ -1067,6 +1080,9 @@ main {
   padding-left: 30px;
   text-align: center;
   background-color: #eeeeee; }
+  @media only screen and (min-width: 768px) {
+    .reason:not(.active) {
+      padding: 48px; } }
   .reason:after {
     content: '';
     position: absolute;
@@ -1078,6 +1094,9 @@ main {
     height: 1px;
     margin: 0 auto;
     background-color: #d6d6d6; }
+    @media only screen and (min-width: 768px) {
+      .reason:after {
+        height: 0; } }
   .reason.active {
     position: static;
     padding-top: 42px;
@@ -1104,7 +1123,8 @@ main {
   padding-bottom: 42px; }
   @media only screen and (min-width: 768px) {
     .options-list {
-      height: 330px; } }
+      padding-top: 0;
+      padding-bottom: 0; } }
   .options-list .option:first-of-type h2 {
     margin-top: 0; }
 
@@ -1117,6 +1137,7 @@ main {
       padding-left: 48px;
       padding-right: 48px;
       padding-top: 147px;
+      padding-bottom: 65px;
       text-align: center; } }
   .option h2 {
     margin: 0;
@@ -1124,23 +1145,52 @@ main {
   .option p {
     margin: 0;
     margin-bottom: 35px; }
+    @media only screen and (min-width: 768px) {
+      .option p {
+        margin-bottom: 0; } }
   .option:before {
     content: '';
     position: absolute;
     top: -10px;
-    left: 20px; }
+    left: 20px;
+    background-repeat: no-repeat; }
+    @media only screen and (min-width: 768px) {
+      .option:before {
+        left: 90px;
+        top: 50px; } }
   .option.accomodation:before {
     background-image: url(../img/i-house.png);
     width: 36px;
     height: 36px; }
+    @media only screen and (min-width: 768px) {
+      .option.accomodation:before {
+        background-image: url(../img/i-house-md.png);
+        width: 75px;
+        height: 72px; } }
+  @media only screen and (min-width: 768px) {
+    .option.souvenirs {
+      padding-left: 43px;
+      padding-right: 43px; } }
   .option.souvenirs:before {
     background-image: url(../img/i-present.png);
     width: 32px;
     height: 38px; }
+    @media only screen and (min-width: 768px) {
+      .option.souvenirs:before {
+        background-image: url(../img/i-present-md.png);
+        width: 64px;
+        height: 76px;
+        top: 44px;
+        left: 95px; } }
   .option.food:before {
     background-image: url(../img/i-burger.png);
-    width: 37px;
-    height: 35px; }
+    width: 74px;
+    height: 69px; }
+    @media only screen and (min-width: 768px) {
+      .option.food:before {
+        background-image: url(../img/i-burger-md.png);
+        width: 75px;
+        height: 72px; } }
 
 .hotels-search {
   position: relative;
@@ -1151,7 +1201,8 @@ main {
   @media only screen and (min-width: 768px) {
     .hotels-search {
       width: 569px;
-      margin: auto; } }
+      margin: auto;
+      box-shadow: none; } }
   .hotels-search .article-header {
     text-align: center;
     padding-top: 28px; }
@@ -1186,7 +1237,8 @@ main {
         padding-bottom: 56px;
         padding-left: 54px;
         position: absolute;
-        background-color: #fff; } }
+        background-color: #fff;
+        box-shadow: 0 3px 9px -2px #333; } }
 
 .hotel-search-form label,
 .hotel-search-form input {
@@ -1249,6 +1301,15 @@ main {
     position: relative; }
     .page-footer .l-center-wrapper .footer-content {
       position: absolute;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       width: 100%;
       height: 234px;
       padding: 28px 20px;
@@ -1259,6 +1320,18 @@ main {
       text-align: center; }
       @media only screen and (min-width: 768px) {
         .page-footer .l-center-wrapper .footer-content {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-justify-content: space-around;
+              -ms-flex-pack: distribute;
+                  justify-content: space-around;
           height: 119px; } }
   .page-footer .hashtag {
     margin-top: 0;
@@ -1275,7 +1348,8 @@ main {
     list-style-type: none; }
     @media only screen and (min-width: 768px) {
       .page-footer .social-list {
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        margin-left: 30px; } }
     .page-footer .social-list li {
       display: inline-block;
       width: 48px;
