@@ -14,6 +14,16 @@
   @include apply-to(greater-than, $md_width) {
     height: 514px;
     padding-top: 76px;
+    background-image:
+      linear-gradient(
+             7deg,
+              #ffffff 13%,
+              transparent 13%),
+      linear-gradient(
+              -7deg,
+              #ffffff 13%,
+              transparent 13%),
+      url(../img/bg-photo-high-md.jpg);
   }
   .welcome {
     width: 196px;

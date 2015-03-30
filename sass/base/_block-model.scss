@@ -4,3 +4,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+img {
+  @include apply-to(greater-than, $md_width) {
+    max-width: 100%;
+    height: auto;
+  }
+}
