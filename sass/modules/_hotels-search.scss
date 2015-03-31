@@ -41,6 +41,7 @@
     padding-bottom: 48px;
     padding-left: 20px;
     @include apply-to(greater-than, $md_width) {
+      width: 100%;
       padding-top: 55px;
       padding-right: 54px;
       padding-bottom: 56px;
@@ -84,35 +85,23 @@
       background: #f2f2f2 url('../img/i-calendar.png') 90% 40% no-repeat;
     }
   }
-  .num-switcher {
-    input[type='number'] {
-      display: block;
-      width: 114px;
-      margin-bottom: 3*$base_font_size;
-      padding-left: 50px;
-      padding-right: 40px;
-      text-align: center;
-      background-repeat:
-        no-repeat,
-        no-repeat;
-      background-position:
-        15% 49%,
-        85% 47%;
-      background-image:
-        url('../img/i-minus.png'),
-        url('../img/i-plus.png');
-    }
-  }
-  input[type='submit'] {
-    width: 100%;
-    font-size: $biggest_font_size;
-    padding: 14px 0;
+}
+.num-switcher {
+  input[type='number'] {
+    display: block;
+    width: 114px;
+    margin-bottom: 3*$base_font_size;
+    padding-left: 50px;
+    padding-right: 40px;
     text-align: center;
-    color: #fff;
-    background-color: $alternate_bg_color;
-    transition: background-color 0.5s ease;
-    &:hover {
-      background-color: $darken_alt_bg_color;
-    }
+    background-repeat:
+      no-repeat,
+      no-repeat;
+    background-position:
+      15% 49%,
+      85% 47%;
+    background-image:
+      url('../img/i-minus.png'),
+      url('../img/i-plus.png');
   }
 }

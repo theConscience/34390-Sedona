@@ -33,6 +33,24 @@ $alter_row_color: #f2f2f2;
 $border_dark_color: #678fa8;
 $border_light_color: #9ac2db;
 
+$btn_color: $alternate_color;
+$btn_down_color: #94b9d2;
+$btn_bg: $alternate_bg_color;
+$btn_hover_bg: #669ec0;
+$btn_down_bg: #5496bd;
+
+$mobile_nav_down_color: $btn_down_color;
+$mobile_nav_bg: $btn_bg;
+$mobile_nav_hover_bg: $btn_hover_bg;
+$mobile_nav_down_bg: $btn_down_bg;
+
+$main_nav_hover: #81b3d2;
+$main_nav_down: #cecece;
+$main_nav_active: #766357;
+$main_nav_active_hover: #604e43;
+$main_nav_active_down: #dbd8d2;
+
+
 //layout variables
 
 $xs_width: 320px;
@@ -42,4 +60,5 @@ $lg_width: 960px;
 $xl_width: 1200px;
 
 $columns: 12;
+
 

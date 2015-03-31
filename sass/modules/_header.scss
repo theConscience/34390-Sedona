@@ -2,7 +2,7 @@
   position: relative;
   //top: - $base_font_size * 16;
   height: $base_font_size * 20 - 3;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   @include apply-to(greater-than, $md_width) {
     height: auto;
   }

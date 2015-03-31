@@ -44,6 +44,9 @@
       left: 90px;
       top: 50px;
     }
+    @include apply-to(greater-than, $xl_width) {
+      left: 162px;
+    }
   }
   &.accomodation:before {
     background-image: url(../img/i-house.png);
@@ -70,6 +73,9 @@
         height: 76px;
         top: 44px;
         left: 95px;
+      }
+      @include apply-to(greater-than, $xl_width) {
+        left: 167px;
       }
     }
   }

@@ -7,7 +7,7 @@
     width: 100%;
     min-width: 320px;
     @include apply-to(greater-than, $md_width) {
-      max-width: 513px;
+
     }
   }
 }
