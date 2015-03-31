@@ -1,9 +1,5 @@
 @charset "UTF-8";
-<<<<<<< HEAD
-/* 
-=======
 /*
->>>>>>> dev_smacss
 	compile file
 */
 /* start the foundation style */
@@ -430,13 +426,8 @@ form input[type='file'] {
   display: none;
 }
 
-<<<<<<< HEAD
-/* 
-	start the project modules like a pages 
-=======
 /*
 	start the project modules like a pages
->>>>>>> dev_smacss
 */
 body {
   background: #f2f2f2;
@@ -511,20 +502,12 @@ body {
   background-color: #e5e5e5;
 }
 .counter-action.plus {
-<<<<<<< HEAD
-  background-image: url(img/ico-action-minus.png);
-=======
   background-image: url(img/ico-action-plus.png);
->>>>>>> dev_smacss
   background-repeat: no-repeat;
   background-position: center;
 }
 .counter-action.minus {
-<<<<<<< HEAD
-  background-image: url(img/ico-action-plus.png);
-=======
   background-image: url(img/ico-action-minus.png);
->>>>>>> dev_smacss
   background-repeat: no-repeat;
   background-position: center;
 }

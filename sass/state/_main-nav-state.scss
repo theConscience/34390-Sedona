@@ -1,0 +1,35 @@
+.main-nav {
+  a {
+    &:hover {
+      background-color: $mobile_nav_hover_bg;
+      @include apply-to(greater-than, $md_width) {
+        background-color: inherit;
+        color: $main_nav_hover;
+      }
+    }
+    &:active {
+      background-color: $mobile_nav_down_bg;
+      color: $mobile_nav_down_color;
+      @include apply-to(greater-than, $md_width) {
+        background-color: inherit;
+        color: $main_nav_down;
+      }
+    }
+  }
+  a.active {
+    @include apply-to(greater-than, $md_width) {
+      color: $main_nav_active;
+    }
+    &:hover {
+      @include apply-to(greater-than, $md_width) {
+        background-color: inherit;
+        color: $main_nav_active_hover;
+      }
+    }
+    &:active {
+      @include apply-to(greater-than, $md_width) {
+        color: $main_nav_active_down;
+      }
+    }
+  }
+}

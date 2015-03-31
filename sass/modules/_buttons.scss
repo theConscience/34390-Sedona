@@ -1,0 +1,14 @@
+
+.btn {
+  width: 100% !important;
+  padding: 14px 0 !important;
+  text-align: center;
+  transition: background-color 0.5s ease;
+  &.btn-standard {
+    border-radius: 0;
+    outline: none;
+    font-size: $biggest_font_size;
+    color: $btn_color;
+    background-color: $btn_bg;
+  }
+}

@@ -40,7 +40,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    background-color: $alternate_bg_color;
+    background-color: $mobile_nav_bg;
     @include apply-to(greater-than, $md_width) {
       background-color: inherit;
     }
@@ -71,19 +71,15 @@
         transition:
                         background-color 0.5s ease,
                         color 0.5s ease;
-        &:hover {
-          background-color: $alternate_bg_color - 40;
-          @include apply-to(greater-than, $md_width) {
-            background-color: inherit;
-            color: $alternate_bg_color;
-          }
-        }
         @include apply-to(greater-than, $md_width) {
           border: none;
           padding: 18px 30px;
           font-size: $base_font_size;
           font-weight: 700;
           color: $base_color;
+        }
+        @include apply-to(greater-than, $xl_width) {
+          padding: 18px 72px;
         }
       }
       &:nth-child(1),

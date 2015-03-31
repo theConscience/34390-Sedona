@@ -1,0 +1,12 @@
+.btn {
+  &.btn-standard {
+    background-color: $btn_bg;
+    &:hover {
+      background-color: $btn_hover_bg;
+    }
+    &:active {
+      color: $btn_down_color;
+      background-color: $btn_down_bg;
+    }
+  }
+}
