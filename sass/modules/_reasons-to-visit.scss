@@ -70,6 +70,13 @@
   }
   text-align: center;
   background-color: #eeeeee;
+  h2 {
+    @include apply-to(greater-than, $xl_width) {
+      width: 153px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   &:not(.active) {
     @include apply-to(greater-than, $md_width) {
       padding: 48px;
@@ -96,6 +103,10 @@
     padding-bottom: $base_font_size*3;
     background-color: $alternate_bg_color;
     color: $alternate_font_color;
+    @include apply-to(greater-than, $md_width) {
+      padding-top: 53px;
+      height: 256px;
+    }
     &:after {
       height: 0;
     }
