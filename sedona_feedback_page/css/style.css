@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* 
+/*
 	compile file
 */
 /* start the foundation style */
@@ -316,38 +316,50 @@ form {
   font-weight: 800;
   text-transform: uppercase;
   background: #81b3d2;
-  font-family: 'PT Sans', sans-serif; }
-  .btn:disabled {
-    opacity: .4; }
-    .btn:disabled:hover {
-      opacity: .4;
-      background: #81b3d2; }
-  .btn:hover {
-    background: #5b9cc5; }
-  .btn:active {
-    background: #3e84af; }
-  .btn.spinner {
-    position: relative; }
-    .btn.spinner:after {
-      content: "";
-      display: block;
-      width: 28px;
-      height: 28px;
-      background: url(img/spinner.gif) no-repeat center;
-      position: absolute;
-      top: 50%;
-      margin-top: -14px;
-      right: 20px;
-      display: none; }
-    .btn.spinner.active:after {
-      display: block; }
-    .btn.spinner:hover {
-      background: #81b3d2;
-      opacity: .8; }
-    .btn.spinner:disabled:after {
-      display: none; }
-    .btn.spinner:disabled.active:after {
-      display: none; }
+
+  font-family: 'PT Sans', sans-serif;
+}
+.btn:disabled {
+  opacity: .4;
+}
+.btn:disabled:hover {
+  opacity: .4;
+  background: #81b3d2;
+}
+.btn:hover {
+  background: #5b9cc5;
+}
+.btn:active {
+  background: #3e84af;
+}
+.btn.spinner {
+  position: relative;
+}
+.btn.spinner:after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: url(img/spinner.gif) no-repeat center;
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+  right: 20px;
+  display: none;
+}
+.btn.spinner.active:after {
+  display: block;
+}
+.btn.spinner:hover {
+  background: #81b3d2;
+  opacity: .8;
+}
+.btn.spinner:disabled:after {
+  display: none;
+}
+.btn.spinner:disabled.active:after {
+  display: none;
+}
 
 /*
 	start the project modules like a pages
@@ -407,17 +419,21 @@ body {
   border: none;
   box-shadow: none;
   cursor: pointer;
-  font-size: 0; }
-  .counter-action:hover {
-    background-color: #e5e5e5; }
-  .counter-action.plus {
-    background-image: url(img/ico-action-minus.png);
-    background-repeat: no-repeat;
-    background-position: center; }
-  .counter-action.minus {
-    background-image: url(img/ico-action-plus.png);
-    background-repeat: no-repeat;
-    background-position: center; }
+  font-size: 0;
+}
+.counter-action:hover {
+  background-color: #e5e5e5;
+}
+.counter-action.plus {
+  background-image: url(img/ico-action-plus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.counter-action.minus {
+  background-image: url(img/ico-action-minus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .counter-input {
   width: 160px !important;
