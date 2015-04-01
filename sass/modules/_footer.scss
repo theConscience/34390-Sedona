@@ -50,7 +50,7 @@
         background-color: $btn_bg;
         transition: background-color 0.5s ease;
         &[class|='i']:before {
-          font-size: $bigger_font_size;
+          font-size: $base_font_size;
           line-height: 48px;
           text-decoration: none;
           color: $alternate_color;
@@ -62,9 +62,22 @@
     text-transform: uppercase;
     margin: 0;
     a {
-      margin-bottom: -0.5em;
-      margin-left: 5px;
-      margin-right: 5px;
+      margin-left: 3px;
+      margin-right: 3px;
+      &[class|='i']:before {
+        position: relative;
+        text-decoration: none;
+        transition: color 0.5s ease;
+        color: $icon_color;
+      }
+      &.i-logo-glukhanko:before {
+        font-size: $font_size_30;
+        top: 6px;
+      }
+      &.i-logo-htmlacademy:before {
+        font-size: $font_size_33;
+        top: 8px;
+      }
     }
   }
 }

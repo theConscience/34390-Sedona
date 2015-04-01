@@ -5,6 +5,9 @@ html {
   box-sizing: inherit;
 }
 img {
+  border: 0;
+  padding: 0;
+  margin: 0;
   @include apply-to(greater-than, $md_width) {
     max-width: 100%;
     height: auto;

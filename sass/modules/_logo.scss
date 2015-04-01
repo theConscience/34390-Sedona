@@ -18,7 +18,7 @@
   }
   a {
     display: block;
-    width: 67px;
+    width: 100%;
     margin: auto;
     text-align: center;
   }
@@ -29,8 +29,8 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: 106.06px;
-    height: 106.06px;
+    width: 106px;
+    height: 106px;
     border-radius: 0 0 20px 0;
     background-color: $alternate_bg_color;
     transform: rotate(45deg) skewX(5deg) skewY(5deg);

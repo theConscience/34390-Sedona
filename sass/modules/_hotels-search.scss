@@ -25,7 +25,7 @@
         padding-bottom: $base_line_height*1.5;
         margin-bottom: 0;
         color: $alternate_font_color;
-        background-color: #766357;
+        background-color: $marker_brown_bg;
       }
     }
     p {
@@ -74,7 +74,7 @@
     font-size: $base_font_size;
     font-family: $base_font_family;
     text-transform: uppercase;
-    background-color: #f2f2f2;
+    outline: none;
     @include apply-to(greater-than, $md_width) {
       margin-bottom: 2*$base_font_size;
     }
@@ -82,26 +82,46 @@
       display: block;
       width: 100%;
       padding-right: 50px;
-      background: #f2f2f2 url('../img/i-calendar.png') 90% 40% no-repeat;
+      background: #f2f2f2 url('../img/icon-calendar.svg') 90% 40% no-repeat;
     }
   }
 }
+.labeled-input {
+
+}
 .num-switcher {
+  position: relative;
+  background-color: #f2f2f2;
+  width: 114px;
+  margin-bottom: 3*$base_font_size;
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 28px;
+  padding-right: 28px;
+  .switcher {
+    position: absolute;
+    height: 35px;
+    width: 28px;
+    cursor: pointer;
+    &.switcher-left {
+      left: 0;
+    }
+    &.switcher-right {
+      right: 0;
+    }
+    &.switcher-left:after {
+      right: 3px;
+    }
+    &.switcher-right:after  {
+      left: 3px;
+    }
+  }
   input[type='number'] {
-    display: block;
-    width: 114px;
-    margin-bottom: 3*$base_font_size;
-    padding-left: 50px;
-    padding-right: 40px;
-    text-align: center;
-    background-repeat:
-      no-repeat,
-      no-repeat;
-    background-position:
-      15% 49%,
-      85% 47%;
-    background-image:
-      url('../img/i-minus.png'),
-      url('../img/i-plus.png');
+    display: inline-block;
+    width: 52px;
+    margin-bottom: 0;
+    padding-right: 0;
+    background-color: inherit;
+    text-align: left;
   }
 }
