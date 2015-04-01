@@ -49,11 +49,11 @@
     }
   }
   &.accomodation:before {
-    background-image: url(../img/i-house.png);
+    background-size: 100%;
+    background-image: url(../img/icon-house.svg);
     width: 36px;
     height: 36px;
     @include apply-to(greater-than, $md_width) {
-      background-image: url(../img/i-house-md.png);
       width: 75px;
       height: 72px;
     }
@@ -64,11 +64,11 @@
       padding-right: 43px;
     }
     &:before {
-      background-image: url(../img/i-present.png);
+      background-size: 100%;
+      background-image: url(../img/icon-gift.svg);
       width: 32px;
       height: 38px;
       @include apply-to(greater-than, $md_width) {
-        background-image: url(../img/i-present-md.png);
         width: 64px;
         height: 76px;
         top: 44px;
@@ -80,13 +80,33 @@
     }
   }
   &.food:before {
-    background-image: url(../img/i-burger.png);
-    width: 74px;
-    height: 69px;
+    background-size: 100%;
+    background-image: url(../img/icon-burger.svg);
+    width: 37px;
+    height: 35px;
     @include apply-to(greater-than, $md_width) {
-      background-image: url(../img/i-burger-md.png);
       width: 75px;
       height: 72px;
+    }
+  }
+}
+.no-svg .option {
+  &.accomodation:before {
+    background-image: url(../img/i-house.png);
+    @include apply-to(greater-than, $md_width) {
+      background-image: url(../img/i-house-md.png);
+    }
+  }
+  &.souvenirs:before {
+    background-image: url(../img/i-present.png);
+    @include apply-to(greater-than, $md_width) {
+        background-image: url(../img/i-present-md.png);
+    }
+  }
+  &.food:before {
+    background-image: url(../img/i-burger.png);
+    @include apply-to(greater-than, $md_width) {
+      background-image: url(../img/i-burger-md.png);
     }
   }
 }

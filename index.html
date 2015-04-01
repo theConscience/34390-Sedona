@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
 
         <div class="logo-wrap">
           <a href="#">
-            <img src="img/logo.png" class="logo" width="67px" height="56px" alt="site logo">
+            <img src="img/logo-sedona@1x.png" class="logo" srcset="img/logo-sedona@2x.png 2x, img/logo-sedona@3x.png 3x"  alt="site logo">
             </a>
         </div>
 
@@ -64,12 +64,11 @@
                   <div class="l-col-2-3-md  clear-padding">
                     <div class="picture-wrapper">
                       <picture>
-                        <source media="(min-width:768px)" srcset="img/bg-photo2-md.jpg">
-                        <img src="img/bg-photo2-default.jpg" alt="picture of sedona" >
+                        <img src="img/photo-city@1x.jpg" alt="picture of sedona" srcset="img/photo-city@2x.jpg 2x" sizes="(min-width:768px) 512w : 100vw,  (min-width: 1200px) 800w : 512w">
                       </picture>
                     </div>
                   </div>
-               </section>`
+               </section>
            </div>
 
 
@@ -108,8 +107,7 @@
                 <div class="l-col-2-3-md  clear-padding">
                   <div class="picture-wrapper">
                     <picture>
-                       <source media="(min-width:768px)" srcset="img/bg-photo3-md.jpg">
-                      <img src="img/bg-photo3-default.jpg"  width="320" alt="picture of sedona">
+                      <img src="img/photo-bridge@1x.jpg" alt="picture of sedona" srcset="img/photo-bridge@2x.jpg 2x" sizes="(min-width: 768px) 512w : 100vw, (min-width: 1200px) 800w : 512w">
                     </picture>
                   </div>
               </div>
@@ -173,22 +171,30 @@
 
               <div class="l-row  clear-padding">
                 <div class="l-col-1-2-xs  clear-padding">
-                  <div class="num-switcher  clearfix">
+                  <div class="labeled-input  clearfix">
                     <div class="l-col-1-2-md">
                       <label for="adults-count">Взрослые:</label>
                     </div>
                     <div class="l-col-1-2-md">
-                      <input type="number" id="adults-count" name="adults_count" value="2" min="0">
+                      <div class="num-switcher">
+                        <span class="i-minus  switcher  switcher-left"></span>
+                        <input type="number" id="adults-count" name="adults_count" value="2" min="0">
+                        <span class="i-plus  switcher  switcher-right"></span>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="l-col-1-2-xs  clear-padding">
-                  <div class="num-switcher  clearfix  ta-right-md">
+                  <div class="labeled-input  clearfix  ta-right-md">
                      <div class="l-col-1-2-md">
-                       <label for="children-count">Дети:</label>
+                       <label for="children-count" class="ta-right-md">Дети:</label>
                      </div>
                      <div class="l-col-1-2-md">
-                       <input type="number" id="children-count"  name="children_count" value="0" min="0" class="fl-right">
+                       <div class="num-switcher  fl-right">
+                         <span class="i-minus  switcher  switcher-left"></span>
+                         <input type="number" id="children-count"  name="children_count" value="0" min="0">
+                         <span class="i-plus  switcher  switcher-right"></span>
+                       </div>
                      </div>
                   </div>
                 </div>
@@ -216,7 +222,7 @@
             <li><a href="#" class="i-youtube"></a></li>
           </ul>
           <p class="copyright">
-            Website by <a href="#" class="i-glukhanko"></a> for <a href="#" class="i-htmlacademy"></a>
+            Website by <a href="#" class="i-logo-glukhanko"></a> for <a href="#" class="i-logo-htmlacademy"></a>
           </p>
         </div>
       </div>

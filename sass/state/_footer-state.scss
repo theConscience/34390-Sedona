@@ -12,13 +12,12 @@
 .copyright a {
   &:hover {
     &[class|='i']:before {
-      background-color: $btn_hover_bg;
+      color: $icon_hover_color;
     }
   }
   &:active {
-    background-color: $btn_down_bg;
     &[class|='i']:before {
-      color: $btn_down_color;
+      color: $icon_down_color;
     }
   }
 }

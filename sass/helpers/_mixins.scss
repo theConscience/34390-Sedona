@@ -45,7 +45,7 @@
     @media screen and (max-width: $val) {
      .fl-right-#{$key},
      .fl-left-#{$key} {
-        float: none;
+        float: none !important;
       }
     }
   }
@@ -56,7 +56,7 @@
     @media screen and (max-width: $val) {
       .ta-right-#{$key},
       .ta-center-#{$key} {
-        text-align: left;
+        text-align: inherit;
       }
     }
   }
@@ -108,6 +108,48 @@
             }
         } @else {
             @media only screen and (#{$extrema1}-width: $window-size1) and (#{$extrema2}-width: $window-size2) and (orientation: $orientation) {
+                @content;
+            }
+        }
+    }
+}
+
+
+/* media queries for retina */
+
+@mixin retinize-for($ltgt, $retina-resolution1, $retina-resolution2: none, $orientation: none) {
+    $extrema1: null;
+    $extrema2: null;
+    @if $ltgt == less-than {
+        $extrema1: max;
+        @if $retina-resolution2 {
+            $extrema2: min;
+        }
+    }
+    @if $ltgt == greater-than {
+        $extrema1: min;
+        @if $retina-resolution2 {
+            $extrema2: max;
+        }
+    }
+    @if  $retina-resolution2 == none {
+        @if  $orientation == none {
+            @media (#{$extrema1}-resolution: $retina-resolution1) {
+                @content;
+            }
+        } @else {
+            @media (#{$extrema1}-resolution: $retina-resolution1) and (orientation: $orientation) {
+                @content;
+            }
+        }
+
+    } @else  {
+        @if  $orientation == none {
+            @media (#{$extrema1}-resolution: $retina-resolution1) and (#{$extrema2}-resolution: $retina-resolution2) {
+                @content;
+            }
+        } @else {
+            @media (#{$extrema1}-resolution: $retina-resolution1) and (#{$extrema2}-resolution: $retina-resolution2) and (orientation: $orientation) {
                 @content;
             }
         }

@@ -4,6 +4,9 @@ $base_font_size: 14px;
 $bigger_font_size: floor($base_font_size*1.28572); //18px
 $biggest_font_size: floor($base_font_size*1.5); //21px
 
+$font_size_30: floor($base_font_size*2.1429); //30px
+$font_size_33: floor($base_font_size*2.3571); //33px
+
 $font_size_14: 14px;
 $font_size_18: 18px;
 $font_size_21: 21px;
@@ -50,6 +53,11 @@ $main_nav_active: #766357;
 $main_nav_active_hover: #604e43;
 $main_nav_active_down: #dbd8d2;
 
+$icon_color: #000;
+$icon_hover_color: $btn_bg;
+$icon_down_color: #bdbbbc;
+
+$marker_brown_bg: #766357;
 
 //layout variables
 
@@ -61,4 +69,7 @@ $xl_width: 1200px;
 
 $columns: 12;
 
-
+//retina variables
+$retina_2x: 1.5*96dpi;
+$retina_3x: 2.5*96dpi;
+$retina_4x: 3.5*96dpi;

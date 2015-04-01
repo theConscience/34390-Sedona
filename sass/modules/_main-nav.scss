@@ -17,7 +17,7 @@
   }
   &:before {
     top: 17px;
-    background-image: url(../img/cancel.png);
+    background-image: url(../img/icon-cross.svg);
     cursor: pointer;
   }
   // open menu button
@@ -69,8 +69,8 @@
         line-height: $bigger_font_size;
         color: $alternate_font_color;
         transition:
-                        background-color 0.5s ease,
-                        color 0.5s ease;
+          background-color 0.5s ease,
+          color 0.5s ease;
         @include apply-to(greater-than, $md_width) {
           border: none;
           padding: 18px 30px;
@@ -95,5 +95,10 @@
         }
       }
     }
+  }
+}
+.no-svg .main-nav {
+  &:before {
+    background-image: url(../img/cancel.png);
   }
 }
