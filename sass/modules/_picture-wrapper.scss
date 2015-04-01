@@ -1,13 +1,19 @@
 .picture-wrapper {
+  position: relative;
+  min-width: 320px;
+  height: 256px;
   img {
+    position: absolute;
     display: block;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    min-width: 320px;
+    height: 100%;
+    left: -35%;
     @include apply-to(greater-than, $md_width) {
-
+      left: 0;
+    }
+    @include apply-to(greater-than, $xl_width) {
+      height: auto;
+      width: 100%;
+      top: -25%;
     }
   }
 }

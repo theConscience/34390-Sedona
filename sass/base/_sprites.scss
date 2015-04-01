@@ -1,53 +1,69 @@
-.i-glukhanko, .i-htmlacademy, .i-burger, .i-house, .i-present, .i-calendar, .i-minus, .i-plus{
+.i-glukhanko, .i-htmlacademy, .i-burger, .i-house, .i-present, .i-calendar, .i-minus:after, .i-plus:after{
   display: inline-block;
   background: url(../img/sprites.png) no-repeat;
 }
 
-.i-glukhanko{
+.i-glukhanko {
   background-position: -4px -0.975006103515625px ;
   width: 27px;
   height: 30px;
 }
 
-.i-htmlacademy{
+.i-htmlacademy {
   background-position: -54px 0;
   width: 27px;
   height: 33px;
 }
 
-.i-burger{
+.i-burger {
   background-position: 0 -47.98749542236328px ;
   width: 37px;
   height: 35px;
 }
 
-.i-house{
+.i-house {
   background-position: -49px -47.98749542236328px ;
   width: 37px;
   height: 37px;
 }
 
-.i-present{
+.i-present {
   background-position: -98px -45.975006103515625px ;
   width: 32px;
   height: 38px;
 }
 
-.i-calendar{
+.i-calendar {
   background-position: -8px -101.9749984741211px ;
   width: 20px;
   height: 22px;
 }
 
-.i-minus{
+.i-minus {
+  position: relative;
+  width: 11px;
+}
+.i-minus:after {
+  content: '';
+  display: block;
+  position: absolute;
   background-position: -112px -114.99999237060547px ;
   width: 11px;
   height: 3px;
+  top: 16px;
 }
 
-.i-plus{
+.i-plus {
+  position: relative;
+  width: 11px;
+}
+.i-plus:after {
+  content: '';
+  display: block;
+  position: absolute;
   background-position: -63px -109.98749542236328px ;
   width: 11px;
   height: 11px;
+  top: 11px;
 }
 
