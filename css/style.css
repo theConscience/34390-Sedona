@@ -357,8 +357,8 @@ th {
    ========================================================================== */
 /* layout column classes */
 /* block width classes */
+/* layout column moves */
 /* generate media queries */
-/*  */
 /* apply options to some media query */
 /* media queries for retina */
 body {
@@ -427,7 +427,7 @@ img {
 .i-logo-htmlacademy:before {
   content: "\e604"; }
 
-.i-glukhanko, .i-htmlacademy, .i-burger, .i-house, .i-present, .i-calendar, .i-minus:after, .i-plus:after {
+.i-glukhanko, .i-htmlacademy, .i-burger, .i-house, .i-present, .i-calendar:after, .i-minus:after, .i-plus:after {
   display: inline-block;
   background: url(../img/sprites.png) no-repeat; }
 
@@ -457,6 +457,13 @@ img {
   height: 38px; }
 
 .i-calendar {
+  position: relative;
+  width: 20px; }
+
+.i-calendar:after {
+  content: '';
+  display: block;
+  position: absolute;
   background-position: -8px -101.975px;
   width: 20px;
   height: 22px; }
@@ -485,7 +492,7 @@ img {
   background-position: -63px -109.9875px;
   width: 11px;
   height: 11px;
-  top: 11px; }
+  top: 12px; }
 
 .clearfix:before,
 .clearfix:after {
@@ -842,6 +849,123 @@ img {
 [class|='width-11-12'] {
   width: 91.66667%; }
 
+[class*='l-col-pull-0'] {
+  right: auto; }
+
+[class*='l-col-push-0'] {
+  left: auto; }
+
+[class*='l-col-offset-0'] {
+  margin-left: 0; }
+
+[class*='l-col-pull-1'] {
+  right: 8.33333%; }
+
+[class*='l-col-push-1'] {
+  left: 8.33333%; }
+
+[class*='l-col-offset-1'] {
+  margin-left: 8.33333%; }
+
+[class*='l-col-pull-2'] {
+  right: 16.66667%; }
+
+[class*='l-col-push-2'] {
+  left: 16.66667%; }
+
+[class*='l-col-offset-2'] {
+  margin-left: 16.66667%; }
+
+[class*='l-col-pull-3'] {
+  right: 25%; }
+
+[class*='l-col-push-3'] {
+  left: 25%; }
+
+[class*='l-col-offset-3'] {
+  margin-left: 25%; }
+
+[class*='l-col-pull-4'] {
+  right: 33.33333%; }
+
+[class*='l-col-push-4'] {
+  left: 33.33333%; }
+
+[class*='l-col-offset-4'] {
+  margin-left: 33.33333%; }
+
+[class*='l-col-pull-5'] {
+  right: 41.66667%; }
+
+[class*='l-col-push-5'] {
+  left: 41.66667%; }
+
+[class*='l-col-offset-5'] {
+  margin-left: 41.66667%; }
+
+[class*='l-col-pull-6'] {
+  right: 50%; }
+
+[class*='l-col-push-6'] {
+  left: 50%; }
+
+[class*='l-col-offset-6'] {
+  margin-left: 50%; }
+
+[class*='l-col-pull-7'] {
+  right: 58.33333%; }
+
+[class*='l-col-push-7'] {
+  left: 58.33333%; }
+
+[class*='l-col-offset-7'] {
+  margin-left: 58.33333%; }
+
+[class*='l-col-pull-8'] {
+  right: 66.66667%; }
+
+[class*='l-col-push-8'] {
+  left: 66.66667%; }
+
+[class*='l-col-offset-8'] {
+  margin-left: 66.66667%; }
+
+[class*='l-col-pull-9'] {
+  right: 75%; }
+
+[class*='l-col-push-9'] {
+  left: 75%; }
+
+[class*='l-col-offset-9'] {
+  margin-left: 75%; }
+
+[class*='l-col-pull-10'] {
+  right: 83.33333%; }
+
+[class*='l-col-push-10'] {
+  left: 83.33333%; }
+
+[class*='l-col-offset-10'] {
+  margin-left: 83.33333%; }
+
+[class*='l-col-pull-11'] {
+  right: 91.66667%; }
+
+[class*='l-col-push-11'] {
+  left: 91.66667%; }
+
+[class*='l-col-offset-11'] {
+  margin-left: 91.66667%; }
+
+[class*='l-col-pull-12'] {
+  right: 100%; }
+
+[class*='l-col-push-12'] {
+  left: 100%; }
+
+[class*='l-col-offset-12'] {
+  margin-left: 100%; }
+
 @media screen and (min-width: 768px) {
   .l-center-wrapper {
     width: 768px;
@@ -852,48 +976,36 @@ img {
     box-shadow: 0 -5px 15px 0  #444; } }
 @media screen and (max-width: 480px) {
   [class*='sm'] {
-    width: 100%; } }
+    width: 100%;
+    margin-left: 0;
+    text-align: inherit;
+    left: 0;
+    right: 0;
+    float: none !important; } }
 @media screen and (max-width: 768px) {
   [class*='md'] {
-    width: 100%; } }
+    width: 100%;
+    margin-left: 0;
+    text-align: inherit;
+    left: 0;
+    right: 0;
+    float: none !important; } }
 @media screen and (max-width: 960px) {
   [class*='lg'] {
-    width: 100%; } }
+    width: 100%;
+    margin-left: 0;
+    text-align: inherit;
+    left: 0;
+    right: 0;
+    float: none !important; } }
 @media screen and (max-width: 1200px) {
   [class*='xl'] {
-    width: 100%; } }
-@media screen and (max-width: 480px) {
-  .fl-right-sm,
-  .fl-left-sm {
+    width: 100%;
+    margin-left: 0;
+    text-align: inherit;
+    left: 0;
+    right: 0;
     float: none !important; } }
-@media screen and (max-width: 768px) {
-  .fl-right-md,
-  .fl-left-md {
-    float: none !important; } }
-@media screen and (max-width: 960px) {
-  .fl-right-lg,
-  .fl-left-lg {
-    float: none !important; } }
-@media screen and (max-width: 1200px) {
-  .fl-right-xl,
-  .fl-left-xl {
-    float: none !important; } }
-@media screen and (max-width: 480px) {
-  .ta-right-sm,
-  .ta-center-sm {
-    text-align: inherit; } }
-@media screen and (max-width: 768px) {
-  .ta-right-md,
-  .ta-center-md {
-    text-align: inherit; } }
-@media screen and (max-width: 960px) {
-  .ta-right-lg,
-  .ta-center-lg {
-    text-align: inherit; } }
-@media screen and (max-width: 1200px) {
-  .ta-right-xl,
-  .ta-center-xl {
-    text-align: inherit; } }
 .page-header {
   position: relative;
   height: 277px;
@@ -1377,34 +1489,48 @@ main {
       padding-left: 0;
       padding-right: 0; } }
 .hotel-search-form input {
-  margin-bottom: 21px;
+  margin-bottom: 0;
   border: none;
   font-size: 14px;
   font-family: "PT Sans", "Tahoma", sans-serif;
   text-transform: uppercase;
   outline: none; }
+
+.date-picker {
+  position: relative;
+  margin-bottom: 21px;
+  padding-right: 50px;
+  background-color: #f2f2f2; }
   @media only screen and (min-width: 768px) {
-    .hotel-search-form input {
+    .date-picker {
       margin-bottom: 28px; } }
-  .hotel-search-form input[type="date"] {
-    display: block;
-    width: 100%;
-    padding-right: 50px;
-    background: #f2f2f2 url("../img/icon-calendar.svg") 90% 40% no-repeat; }
+  .date-picker .choose-date {
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    cursor: pointer;
+    top: 0;
+    right: 0; }
+    .date-picker .choose-date:after {
+      top: 8px;
+      right: 10px; }
+  .date-picker input[type="date"] {
+    display: inline-block;
+    background-color: inherit; }
 
 .num-switcher {
   position: relative;
-  background-color: #f2f2f2;
   width: 114px;
   margin-bottom: 42px;
-  text-align: center;
-  vertical-align: middle;
   padding-left: 28px;
-  padding-right: 28px; }
+  padding-right: 28px;
+  background-color: #f2f2f2;
+  text-align: center;
+  vertical-align: middle; }
   .num-switcher .switcher {
     position: absolute;
-    height: 35px;
     width: 28px;
+    height: 35px;
     cursor: pointer; }
     .num-switcher .switcher.switcher-left {
       left: 0; }
@@ -1417,7 +1543,6 @@ main {
   .num-switcher input[type='number'] {
     display: inline-block;
     width: 52px;
-    margin-bottom: 0;
     padding-right: 0;
     background-color: inherit;
     text-align: left; }
