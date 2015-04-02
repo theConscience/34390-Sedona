@@ -63,9 +63,7 @@
                  </div>
                   <div class="l-col-2-3-md  clear-padding">
                     <div class="picture-wrapper">
-                      <picture>
-                        <img src="img/photo-city@1x.jpg" alt="picture of sedona" srcset="img/photo-city@2x.jpg 2x" sizes="(min-width:768px) 512w : 100vw,  (min-width: 1200px) 800w : 512w">
-                      </picture>
+                      <img src="img/photo-city@1x.jpg" alt="picture of sedona" srcset="img/photo-city@2x.jpg 2x">
                     </div>
                   </div>
                </section>
@@ -80,13 +78,13 @@
                   <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </div>
               </div>
-              <div class="l-col-1-3-md  clear-padding">
+              <div class="l-col-1-3-md  clear-padding  l-col-push-4-md">
                 <div class="option souvenirs">
                   <h2>Сувениры</h2>
                   <p>Не только китайского, но и местного производства!</p>
                 </div>
               </div>
-              <div class="l-col-1-3-md  clear-padding">
+              <div class="l-col-1-3-md  clear-padding  l-col-pull-4-md">
                 <div class="option food">
                   <h2>Еда</h2>
                   <p>Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
@@ -106,9 +104,7 @@
                 </div>
                 <div class="l-col-2-3-md  clear-padding">
                   <div class="picture-wrapper">
-                    <picture>
-                      <img src="img/photo-bridge@1x.jpg" alt="picture of sedona" srcset="img/photo-bridge@2x.jpg 2x" sizes="(min-width: 768px) 512w : 100vw, (min-width: 1200px) 800w : 512w">
-                    </picture>
+                    <img src="img/photo-bridge@1x.jpg" alt="picture of sedona" srcset="img/photo-bridge@2x.jpg 2x">
                   </div>
               </div>
             </section>
@@ -157,7 +153,10 @@
                   <label for="arrival-date" >Дата заезда:</label>
                 </div>
                 <div class="l-col-3-4-md">
-                  <input type="date" id="arrival_date" name="arrival_date" value="2015-04-24">
+                  <div class="date-picker">
+                    <input type="date" id="arrival_date" name="arrival_date" value="2015-04-24">
+                    <span class="i-calendar  choose-date"></span>
+                  </div>
                 </div>
               </div>
               <div class="l-row  clear-padding">
@@ -165,7 +164,10 @@
                   <label for="departure-date">Дата выезда:</label>
                 </div>
                 <div class="l-col-3-4-md">
-                  <input type="date" id="departure_date" name="departure_date" value="2015-07-04">
+                  <div class="date-picker">
+                    <input type="date" id="departure_date" name="departure_date" value="2015-07-04">
+                    <span class="i-calendar  choose-date"></span>
+                  </div>
                 </div>
               </div>
 

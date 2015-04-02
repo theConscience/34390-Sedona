@@ -8,7 +8,3 @@
 
 @include generate_media((sm: $sm_width, md: $md_width, lg: $lg_width, xl: $xl_width));
 
-@include generate_floats((sm: $sm_width, md: $md_width, lg: $lg_width, xl: $xl_width));
-
-@include generate_align((sm: $sm_width, md: $md_width, lg: $lg_width, xl: $xl_width));
-
