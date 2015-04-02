@@ -69,39 +69,52 @@
     }
   }
   input {
-    margin-bottom: $base_line_height;
+    margin-bottom: 0;
     border: none;
     font-size: $base_font_size;
     font-family: $base_font_family;
     text-transform: uppercase;
     outline: none;
-    @include apply-to(greater-than, $md_width) {
-      margin-bottom: 2*$base_font_size;
-    }
-    &[type="date"] {
-      display: block;
-      width: 100%;
-      padding-right: 50px;
-      background: #f2f2f2 url('../img/icon-calendar.svg') 90% 40% no-repeat;
-    }
   }
 }
-.labeled-input {
-
+.date-picker {
+  position: relative;
+  margin-bottom: $base_line_height;
+  padding-right: 50px;
+  background-color: #f2f2f2;
+  @include apply-to(greater-than, $md_width) {
+    margin-bottom: 2*$base_font_size;
+  }
+  .choose-date {
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    &:after {
+      top: 8px;
+      right: 10px;
+    }
+  }
+  input[type="date"] {
+    display: inline-block;
+    background-color: inherit;
+  }
 }
 .num-switcher {
   position: relative;
-  background-color: #f2f2f2;
   width: 114px;
   margin-bottom: 3*$base_font_size;
-  text-align: center;
-  vertical-align: middle;
   padding-left: 28px;
   padding-right: 28px;
+  background-color: #f2f2f2;
+  text-align: center;
+  vertical-align: middle;
   .switcher {
     position: absolute;
-    height: 35px;
     width: 28px;
+    height: 35px;
     cursor: pointer;
     &.switcher-left {
       left: 0;
@@ -119,7 +132,6 @@
   input[type='number'] {
     display: inline-block;
     width: 52px;
-    margin-bottom: 0;
     padding-right: 0;
     background-color: inherit;
     text-align: left;

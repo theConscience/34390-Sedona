@@ -4,7 +4,7 @@
   @for $i from 1 to $cols_count+1 {
     @for $j from 1 to $i {
       @if ( $i%$j != 0 or $i == 1 or $j == 1 ) and ($i%2+$j%2 != 0)  {
-         [class*='l-col-#{$j}-#{$i}'] {
+        [class*='l-col-#{$j}-#{$i}'] {
           width: 100%/$i*$j;
         }
       }
@@ -27,6 +27,34 @@
   }
 }
 
+/* layout column moves */
+
+@mixin generate_column_move($cols_count) {
+  @for $i from 0 to $cols_count+1 {
+    [class*='l-col-pull-#{$i}'] {
+      @if ($i != 0) {
+        right: 100%/$cols_count*$i;
+      } @else {
+        right: auto;
+      }
+    }
+    [class*='l-col-push-#{$i}'] {
+      @if ($i != 0) {
+        left: 100%/$cols_count*$i;
+      } @else {
+        left: auto;
+      }
+    }
+    [class*='l-col-offset-#{$i}'] {
+      @if ($i != 0) {
+        margin-left: 100%/$cols_count*$i;
+      } @else {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 
 /* generate media queries */
 
@@ -35,36 +63,15 @@
     @media screen and (max-width: $val) {
       [class*='#{$key}'] {
         width: 100%;
-      }
-    }
-  }
-}
-
-@mixin generate_floats($viewports) {
-  @each $key,$val in $viewports {
-    @media screen and (max-width: $val) {
-     .fl-right-#{$key},
-     .fl-left-#{$key} {
+        margin-left: 0;
+        text-align: inherit;
+        left: 0;
+        right: 0;
         float: none !important;
       }
     }
   }
 }
-
-@mixin generate_align($viewports) {
-  @each $key,$val in $viewports {
-    @media screen and (max-width: $val) {
-      .ta-right-#{$key},
-      .ta-center-#{$key} {
-        text-align: inherit;
-      }
-    }
-  }
-}
-
-
-/*  */
-
 
 
 /* apply options to some media query */

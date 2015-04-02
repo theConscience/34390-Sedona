@@ -90,3 +90,4 @@
 
 @include generate_columns($columns);
 @include generate_widths($columns);
+@include generate_column_move($columns);
