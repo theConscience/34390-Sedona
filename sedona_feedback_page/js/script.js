@@ -91,7 +91,7 @@
         button.addEventListener("input", function(event) {
             event.preventDefault();
             console.log('change input');
-            var val = parseInt(this.value);
+            var val = this.value;
             if (isNaN(val)) {
                 console.log('please enter Number!');
                 this.value = '';
