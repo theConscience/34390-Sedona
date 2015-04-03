@@ -1,0 +1,9 @@
+.page-header.collapsed {
+  margin-bottom: -225px;
+  top: -225px;
+  @include apply-to(greater-than, $md_width) {
+    margin-bottom: 0;
+    top: 0px;
+    transition: none;
+  }
+}

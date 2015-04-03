@@ -3,8 +3,14 @@
   //top: - $base_font_size * 16;
   height: $base_font_size * 20 - 3;
   /* background-color: lightgrey; */
+  top:0;
+  margin-bottom: 0;
+  transition:
+        margin-bottom 0.3s ease-out,
+        top 0.3s ease-out;
   @include apply-to(greater-than, $md_width) {
     height: auto;
+    transition: none;
   }
 }
 
