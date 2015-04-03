@@ -2,26 +2,25 @@
   position: relative;
   z-index: 2;
   // close menu button
-  &:before,
-  &:after {
-    content: '';
+  .menu-collapse,
+  .menu-show {
     position: absolute;
     right: 0;
     width: 23px;
     height: 22px;
     bottom: -39px;
     right: 20px;
+    cursor: pointer;
     @include apply-to(greater-than, $md_width) {
       display: none;
     }
   }
-  &:before {
+  .menu-collapse {
     top: 17px;
     background-image: url(../img/icon-cross.svg);
-    cursor: pointer;
   }
   // open menu button
-  &:after {
+  .menu-show {
     background-color: #eee;
     background-image: linear-gradient(
       $alternate_bg_color 0,
@@ -34,7 +33,6 @@
       #fff 81.818181%,
       $alternate_bg_color 81.818181%,
       $alternate_bg_color 100%);
-    cursor: pointer;
   }
   ul {
     margin: 0;

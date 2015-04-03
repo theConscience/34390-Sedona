@@ -3,6 +3,8 @@
     var minus = document.querySelectorAll('.counter-action.minus');
     var inputs = document.querySelectorAll('.people-count, .children-count, .travel-time');
 
+    // menu-collape on click classlist add collapsed
+
     //var adults = document.querySelector('.people-count');
     //var children = document.querySelector('.children-count');
 
@@ -101,5 +103,4 @@
             }
         });
     });
-
 })();
