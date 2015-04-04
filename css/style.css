@@ -1009,8 +1009,8 @@ img {
   /* background-color: lightgrey; */
   top: 0;
   margin-bottom: 0;
-  -webkit-transition: margin-bottom 0.3s ease-out, top 0.3s ease-out;
-          transition: margin-bottom 0.3s ease-out, top 0.3s ease-out; }
+  -webkit-transition: margin-bottom 0.2s ease-out, top 0.2s ease-out;
+          transition: margin-bottom 0.2s ease-out, top 0.2s ease-out; }
   @media only screen and (min-width: 768px) {
     .page-header {
       height: auto;
