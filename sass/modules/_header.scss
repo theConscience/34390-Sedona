@@ -6,8 +6,8 @@
   top:0;
   margin-bottom: 0;
   transition:
-        margin-bottom 0.3s ease-out,
-        top 0.3s ease-out;
+        margin-bottom 0.2s ease-out,
+        top 0.2s ease-out;
   @include apply-to(greater-than, $md_width) {
     height: auto;
     transition: none;
