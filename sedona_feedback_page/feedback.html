@@ -90,7 +90,7 @@
               <label for="text7">Количество взрослых: <span>*</span></label>
               <div class="counter clearfix">
                 <button class="counter-action plus">плюс</button>
-                <input type="text" name="people-count" class="people-count counter-input" value="1" data-min="1">
+                <input type="text" name="people-count" class="people-count counter-input" value="0" data-min="1">
                 <button class="counter-action minus">минус</button>
               </div>
             </div>
@@ -259,6 +259,37 @@
     </div>
   </div>
 
+  <script id="adult_template" type="text/html">
+    <div class="col s-4">
+      <label for="text8">Фамилия взрослого №{{number}}: <span>*</span></label>
+      <input type="text" id="text8" value="">
+    </div>
+    <div class="col s-4">
+      <label for="text9">Имя взрослого №{{number}}: <span>*</span></label>
+      <input type="text" id="text9" value="">
+    </div>
+    <div class="col s-4">
+      <label for="text10">Отчество взрослого №{{number}}:</label>
+      <input type="text" id="text10">
+    </div>
+  </script>
+
+  <script id="child_template" type="text/html">
+    <div class="col s-4">
+      <label for="text14">Фамилия ребенка №{{number}}: <span>*</span></label>
+      <input type="text" id="text14">
+    </div>
+    <div class="col s-4">
+      <label for="text15">Имя ребенка №{{number}}: <span>*</span></label>
+      <input type="text" id="text15">
+    </div>
+    <div class="col s-4">
+      <label for="text16">Отчество ребенка №{{number}}:</label>
+      <input type="text" id="text16">
+    </div>
+  </script>
+
+  <script src="js/vendors/mustache.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

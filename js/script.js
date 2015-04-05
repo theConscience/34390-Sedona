@@ -54,5 +54,44 @@ function initialize() {
         }
     });
 
+    var a = []
+    var i = 0;
+    while (i<100) {
+        a[i] = parseInt(i);
+        i+=1;
+    }
+
+    function floodCreator(item, i) {
+        var fizz = '';
+        var buzz = '';
+        if (i%3 == 0) {
+            fizz = 'fizz'; }
+        if (i%5 == 0) {
+            buzz = 'buzz'; }
+        console.log(i%3);
+        console.log(i%5);
+
+
+        console.log(i+ " " + fizz + buzz);
+    }
+
+    //a.forEach(floodCreator);
+
+
+    function School() {
+        this.alert = function() {
+            console.log("EVERYBODY HATES ME!");
+        }
+    }
+
+
+    var Pupil = {};
+    //Pupil.alert();
+    Pupil.prototype = School;
+    Pupil.alert();
+
+
+
+
 
 })();
