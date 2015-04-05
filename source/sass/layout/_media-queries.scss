@@ -1,0 +1,10 @@
+@media screen and (min-width: $md_width) {
+  @import "layout-md";
+}
+
+@media screen and (min-width: $xl_width) {
+  @import "layout-xl";
+}
+
+@include generate_media((sm: $sm_width, md: $md_width, lg: $lg_width, xl: $xl_width));
+
