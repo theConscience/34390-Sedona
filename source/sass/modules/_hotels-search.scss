@@ -105,18 +105,6 @@
       right: 10px;
     }
   }
-  .choose-date {
-    position: absolute;
-    width: 50px;
-    height: 35px;
-    cursor: pointer;
-    top: 0;
-    right: 0;
-    &:after {
-      top: 8px;
-      right: 10px;
-    }
-  }
   input[type="date"] {
     display: inline-block;
     background-color: inherit;
@@ -131,22 +119,43 @@
   background-color: #f2f2f2;
   text-align: center;
   vertical-align: middle;
-  .switcher {
+  svg {
+    position: absolute;
+  }
+  .svg-minus {
+    fill: #c2c2c2;
     position: absolute;
     width: 28px;
-    height: 35px;
+    height: 38px;
     cursor: pointer;
-    &.switcher-left {
-      left: 0;
+    left: 0;
+    &:hover {
+      fill: $base_color;
     }
-    &.switcher-right {
-      right: 0;
+    &:active {
+      fill: $icon_hover_color;
     }
-    &.switcher-left:after {
-      right: 3px;
+    svg {
+      top: 16px;
+      left: 10px;
     }
-    &.switcher-right:after  {
-      left: 3px;
+  }
+  .svg-plus {
+    fill: #c2c2c2;
+    position: absolute;
+    width: 28px;
+    height: 38px;
+    cursor: pointer;
+    right: 0;
+    &:hover {
+      fill: $base_color;
+    }
+    &:active {
+      fill: $icon_hover_color;
+    }
+    svg {
+      top: 12px;
+      right: 10px;
     }
   }
   input[type='number'] {

@@ -119,10 +119,16 @@ module.exports = function(grunt) {
     },
 
     svginject: {
-      images_config: {
+      images_config_source: {
         options: {},
         files: {
           "source/js/SVGinject.js": ["source/img/calendar.svg","source/img/plus.svg", "source/img/minus.svg"]
+        }
+      },
+      images_config_build: {
+        options: {},
+        files: {
+          "build/js/SVGinject.js": ["build/img/calendar.svg","build/img/plus.svg", "build/img/minus.svg"]
         }
       }
     },
@@ -207,7 +213,7 @@ module.exports = function(grunt) {
     //'replace',
     'cssmin',
     'imagemin',
-    //'svginject',
+    'svginject:images_config_build',
     'htmlmin',
     'csscomb:css_resort'
   ]);
