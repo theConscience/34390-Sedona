@@ -1,0 +1,83 @@
+.i-glukhanko,
+.i-htmlacademy,
+.i-burger,
+.i-house,
+.i-present,
+.i-calendar:after,
+.i-minus:after,
+.i-plus:after {
+  display: inline-block;
+  background: url(../img/sprites.png) no-repeat;
+}
+
+.i-glukhanko {
+  width: 27px;
+  height: 30px;
+  background-position: -4px -.975006103515625px ;
+}
+
+.i-htmlacademy {
+  width: 27px;
+  height: 33px;
+  background-position: -54px 0;
+}
+
+.i-burger {
+  width: 37px;
+  height: 35px;
+  background-position: 0 -47.98749542236328px ;
+}
+
+.i-house {
+  width: 37px;
+  height: 37px;
+  background-position: -49px -47.98749542236328px ;
+}
+
+.i-present {
+  width: 32px;
+  height: 38px;
+  background-position: -98px -45.975006103515625px ;
+}
+
+.i-calendar {
+  position: relative;
+  width: 20px;
+}
+.i-calendar:after {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 22px;
+  background-position: -8px -101.9749984741211px ;
+  content: "";
+}
+
+.i-minus {
+  position: relative;
+  width: 11px;
+}
+.i-minus:after {
+  position: absolute;
+  top: 16px;
+  display: block;
+  width: 11px;
+  height: 3px;
+  background-position: -112px -114.99999237060547px ;
+  content: "";
+}
+
+.i-plus {
+  position: relative;
+  width: 11px;
+}
+.i-plus:after {
+  position: absolute;
+  top: 12px;
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-position: -63px -109.98749542236328px ;
+  content: "";
+}
+
